@@ -18,12 +18,12 @@ Get the badge by copying the relevant snippet below and replacing "name" with th
 
 ### HTML:
 
-```
+```html
 <img src="https://snyk.io/test/npm/name/badge.svg" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/npm/name style="max-width:100%;/>
 ```
 
 ### Markdown:
 
-```
+```md
 [![Known Vulnerabilities](https://snyk.io/test/npm/name/badge.svg)](https://snyk.io/test/npm/name)
 ```

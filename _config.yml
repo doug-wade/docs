@@ -1,0 +1,25 @@
+destination:  ./_site
+
+layouts_dir:  _layouts
+includes_dir: _includes
+
+include:     ['.htaccess']
+exclude:
+  - _config.yaml
+  - example.info
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+keep_files:  ['.git']
+
+markdown:    kramdown
+
+permalink:   blog/:title/
+
+collections:
+  - patterns
+  - docs_quick-start
+  - docs_using-snyk
+  - docs_faqs
+  - docs_landing

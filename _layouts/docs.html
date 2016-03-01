@@ -1,0 +1,92 @@
+{% include head.html %}
+
+{% include header.html %}
+
+<div class="layout-container--tight layout-container--push">
+
+  <div id="readme" class="markdown">
+
+    <h1 id="documentation">Documentation</h1>
+
+    <div class="docs docs--faqs">
+
+      <ul class="nav nav-tree nav--docs nav--offset">
+        <li class="nav-tree__item nav--docs__item nav--docs__landing">
+          <a href="/docs/quick-start" class="nav-tree__item__link">Quick start guide</a>
+          {% if page.section == "quick-start" %}
+          <ul class="nav-tree__branch">{% for article in site.docs_quick-start %}{% if article.title == "" %}{% else %}
+            <li class="nav-tree__item {% if article.draft %}status--draft{% endif %}">
+              <a href="/docs/quick-start/#{{article.title | slugify}}" class="nav-tree__item__link">{{article.title}}</a>
+            </li>{% endif %}{% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        <li class="nav-tree__item nav--docs__item nav--docs__using-snyk">
+          <a href="/docs/using-snyk/" class="nav-tree__item__link">Using Snyk</a>
+          {% if page.section == "using-snyk" %}
+          <ul class="nav-tree__branch">{% for article in site.docs_using-snyk %}{% if article.title == "" %}{% else %}
+            <li class="nav-tree__item {% if article.draft %}status--draft{% endif %}">
+              <a href="/docs/using-snyk/#{{article.title | slugify}}" class="nav-tree__item__link">{{article.title}}</a>
+            </li>{% endif %}{% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        <li class="nav-tree__item nav--docs__item nav--docs__faqs">
+          <a href="/docs/faqs/" class="nav-tree__item__link">FAQs</a>
+          {% if page.section == "faqs" %}
+          <ul class="nav-tree__branch">{% for article in site.docs_faqs %}{% if article.title == "" %}{% else %}
+            <li class="nav-tree__item {% if article.draft %}status--draft{% endif %}">
+              <a href="/docs/faqs/#{{article.slug}}" class="nav-tree__item__link">{{article.title}}</a>
+            </li>{% endif %}{% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+      </ul>
+
+      {% if page.title %}<h1 class="title">{{page.title}}</h1>{% endif %}
+
+      {% if page.section == "quick-start" %}
+      {% for article in site.docs_quick-start %}
+      {% if article.draft %}<div class="status--draft">{% endif %}
+        {% if article.title == "" %}{% else %}<h2 id="{{article.title | slugify}}">{{ article.title }}</h2>{% endif %}
+        {{ article.content }}
+      {% if article.draft %}</div><!-- .status--draft -->{% endif %}
+      {% endfor %}
+      {% endif %}
+
+      {% if page.section == "using-snyk" %}
+      {% for article in site.docs_using-snyk %}
+      {% if article.draft %}<div class="status--draft">{% endif %}
+        {% if article.title == "" %}{% else %}<h2 id="{{article.title | slugify}}">{{ article.title }}</h2>{% endif %}
+        {{ article.content }}
+      {% if article.draft %}</div><!-- .status--draft -->{% endif %}
+      {% endfor %}
+      {% endif %}
+
+      {% if page.section == "faqs" %}
+      {% for article in site.docs_faqs %}
+      {% if article.draft %}<div class="status--draft">{% endif %}
+        {% if article.title == "" %}{% else %}<h2 id="{{article.title | slugify}}">{{ article.title }}</h2>{% endif %}
+        {{ article.content }}
+      {% if article.draft %}</div><!-- .status--draft -->{% endif %}
+      {% endfor %}
+      {% endif %}
+
+      {% if page.section == "landing" %}
+      {% for article in site.docs_landing %}
+      {% if article.draft %}<div class="status--draft">{% endif %}
+        {% if article.title == "" %}{% else %}<h2 id="{{article.title | slugify}}">{{ article.title }}</h2>{% endif %}
+        {{ article.content }}
+      {% if article.draft %}</div><!-- .status--draft -->{% endif %}
+      {% endfor %}
+      {% endif %}
+
+    </div>
+
+  </div>
+
+</div>
+
+{% include footer.html %}
+
+{% include foot.html %}

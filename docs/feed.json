@@ -1,0 +1,37 @@
+---
+---
+
+[
+  {% for article in site.docs_landing %}{% if article.draft %}{% else %}
+  {
+    {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},
+    {% endif %}"docs_landing" : "true",
+    "url"     : "/docs/{{ article.title | slugify }}",{% if article.title %}
+    "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
+    "content": {{ article.content | jsonify }}
+  },
+  {% endif %}{% endfor %}{% for article in site.docs_quick-start %}{% if article.draft %}{% else %}
+  {
+    {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},
+    {% endif %}"docs_quick-start" : "true",
+    "url"     : "/docs/quick-start/{{ article.title | slugify }}",{% if article.title %}
+    "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
+    "content": {{ article.content | jsonify }}
+  },
+  {% endif %}{% endfor %}{% for article in site.docs_using-snyk %}{% if article.draft %}{% else %}
+  {
+    {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},
+    {% endif %}"docs_using-snyk" : "true",
+    "url"     : "/docs/using-snyk/{{ article.title | slugify }}",{% if article.title %}
+    "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
+    "content": {{ article.content | jsonify }}
+  }
+  {% endif %}{% if forloop.last %}{% else %},{% endif %}{% endfor %}{% for article in site.docs_faqs %}{% if article.draft %}{% else %}
+  {
+    {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},
+    {% endif %}"docs_faqs" : "true",
+    "url"     : "/docs/faqs/{{ article.title | slugify }}",{% if article.title %}
+    "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
+    "content": {{ article.content | jsonify }}
+  }{% endif %}{% if forloop.last %}{% else %},{% endif %}{% endfor %}
+]

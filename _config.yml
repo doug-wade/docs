@@ -3,6 +3,13 @@ destination:  ./_site
 layouts_dir:  _layouts
 includes_dir: _includes
 
+baseurl: /docs
+
+defaults:
+  -
+    values:
+      layout: "docs"
+
 include:     ['.htaccess']
 exclude:
   - _config.yaml
@@ -15,7 +22,7 @@ keep_files:  ['.git']
 
 markdown:    kramdown
 
-permalink:   blog/:title/
+permalink:   :title/
 
 collections:
   - patterns

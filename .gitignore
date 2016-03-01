@@ -1,8 +1,6 @@
 !_site/
 _site/*
-!_site/docs/
-_site/docs/*
-!_site/docs/feed.json
+!_site/feed.json
 
 .DS_Store
 

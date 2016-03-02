@@ -28,3 +28,11 @@ To not show the title (such as on a landing section), add this line to the YAML 
 title: ""
 ---
 ```
+
+### Add inline code
+
+For insline code, such as a word, use a single backtick.
+
+### Add code blocks
+
+To wrap some code in a code block, use 3 backticks before and after the text.

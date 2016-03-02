@@ -31,7 +31,7 @@ title: ""
 
 ### Add inline code
 
-For insline code, such as a word, use a single backtick.
+For inline code, such as a word, use a single backtick.
 
 ### Add code blocks
 

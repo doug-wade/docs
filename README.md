@@ -1,5 +1,7 @@
 # Snyk Documentation
 
+Preview url: https://snyk.github.io/docs/
+
 ## Getting set up
 
 1. Pull down the repo

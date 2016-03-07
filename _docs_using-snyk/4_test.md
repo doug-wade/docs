@@ -31,4 +31,4 @@ title: Test
   <li>user/project#commit-ish</li>
 </ul>
 <p>This also works for Bitbucket and GitLab.</p>
-<p>You can also test a public npm package or Github project<a href="https://snyk.io/test/" title="Test page">via the Test page on snyk.io</a></p>
+<p>You can also test a public npm package or Github project <a href="https://snyk.io/test/" title="Test page">via the Test page on snyk.io</a></p>

@@ -3,11 +3,11 @@ title: ""
 draft: true
 ---
 
-Just getting started with Snyk? Follow this step-by-step guide to get set up.
+Just getting started with Snyk? <a href="https://snyk.io/docs/quick-start/" title="Quick start guide">Follow this step-by-step guide</a> to get set up.
 
-Check our detailed documentation, and if you’d like to know more about how to tackle known vulnerabilities, our FAQ have all the answers.
+<a href="https://snyk.io/docs/using-snyk/" title="Using Snyk">Check our documentation</a> for details on how to make the most of Snyk.
 
-Need help with anything you can’t find here? Drop us a line at support@snyk.io and we’ll get right back to you.
+Need help with anything you can’t find here? [Drop us a line](mailto:support@snyk.io) and we’ll get right back to you.
 
 ## CLI commands overview
 
@@ -47,6 +47,6 @@ snyk test
 snyk test ionic@1.6.5
 ```
 
-<div class="alert alert--inline alert--notice">
-  <p>use `snyk test` in your test scripts, if a vulnerability is found, the process will exit with a non-zero exit code.</p>
+<div class="alert alert--inline">
+  <p>Use `snyk test` in your test scripts. If a vulnerability is found, the process will exit with a non-zero exit code.</p>
 </div>

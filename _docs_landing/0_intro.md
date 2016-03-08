@@ -1,6 +1,5 @@
 ---
 title: ""
-draft: true
 ---
 
 Just getting started with Snyk? <a href="https://snyk.io/docs/quick-start/" title="Quick start guide">Follow this step-by-step guide</a> to get set up.

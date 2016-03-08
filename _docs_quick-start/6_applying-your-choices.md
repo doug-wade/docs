@@ -1,6 +1,5 @@
 ---
 title: Applying your choices
-draft: true
 ---
 
 That’s it, we’ve tackled all the issues – hurray!

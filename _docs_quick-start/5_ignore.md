@@ -1,6 +1,5 @@
 ---
 title: Ignore
-draft: true
 ---
 
 This issue the wizard shows is not as easily solved.

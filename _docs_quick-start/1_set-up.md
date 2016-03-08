@@ -1,6 +1,5 @@
 ---
 title: Set up
-draft: true
 ---
 
 First off, you’ll need a project to test. If you don’t have one handy, you can use our demo application, [snyk-demo-app](https://github.com/Snyk/snyk-demo-app). Simply run these lines to clone it and install its dependencies:

@@ -8,10 +8,13 @@
 
     <h1 id="documentation">Documentation</h1>
 
-    <div class="docs docs--faqs">
+    <div class="docs
+    {% if page.section == "faqs" %}docs--faqs{% endif %}
+    {% if page.section == "quick-start" %}docs--quick-start{% endif %}
+    {% if page.section == "using-snyk" %}docs--using-snyk{% endif %}">
 
       <ul class="nav nav-tree nav--docs nav--offset">
-        <li class="nav-tree__item nav--docs__item nav--docs__landing">
+        <li class="nav-tree__item nav--docs__item nav--docs__quick-start">
           <a href="/docs/quick-start" class="nav-tree__item__link">Quick start guide</a>
           {% if page.section == "quick-start" %}
           <ul class="nav-tree__branch">{% for article in site.docs_quick-start %}{% if article.title == "" %}{% else %}

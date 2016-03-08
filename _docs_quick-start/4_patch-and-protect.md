@@ -1,6 +1,5 @@
 ---
 title: Patch and Protect
-draft: true
 ---
 
 Patch and Protect

@@ -1,6 +1,5 @@
 ---
 title: Monitor
-draft: true
 ---
 
 Now that you’re free of known vulnerabilities, there are two ways that can change. The first is adding vulnerable packages to your code, which we handle by adding `snyk test` to your test/CI system. The second is through newly disclosed vulnerabilities. These are new disclosures of vulnerabilities in old code – the code you’re running in production!

@@ -1,6 +1,5 @@
 ---
 title: Testing
-draft: true
 ---
 
 To find vulnerabilities, the wizard will traverse the local project and collect the packages it uses (note this means you should only run it after you run `npm install`). It then posts this list to the Snyk service, where they’re matched against Snyk’s [open source vulnerability database](https://github.com/Snyk/vulndb).

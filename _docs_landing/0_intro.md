@@ -10,7 +10,7 @@ Need help with anything you can’t find here? [Drop us a line](mailto:support@s
 
 ## CLI commands overview
 
-```
+```console
 snyk [options] [command] [package]
 ```
 
@@ -18,7 +18,7 @@ The package argument is optional. If no package is given, Snyk will run the comm
 
 ### Commands
 
-```
+```console
 auth ............... sign into snyk (required).
 test ............... test for any known vulnerabilities.
 wizard ............. configure your policy file to update, auto patch and ignore vulnerabilities.
@@ -30,7 +30,7 @@ support ............ file an issue or request support.
 
 ### Options
 
-```
+```console
 --dev .............. include devDependencies (defaults to production only)
 --ignore-policy .... ignores and resets the state of your policy file
 --dry-run .......... don't apply updates or patches during protect.
@@ -41,7 +41,7 @@ support ............ file an issue or request support.
 
 ### Examples
 
-```
+```console
 snyk test
 snyk test ionic@1.6.5
 ```

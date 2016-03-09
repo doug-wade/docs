@@ -14,7 +14,7 @@ You can see the wizard tells you how many vulnerabilities were found in how many
 
 The first vulnerability is a **high severity issue in a direct dependency called bassmaster**. There’s only so much detail we can share in a terminal, but you can use the [info link](https://snyk.io/vuln/npm:bassmaster:20140927) to get more information about the vulnerability itself.
 
-```
+```console
 ? High severity vulnerability found in bassmaster@1.5.1, introduced via bassmaster@1.5.1
 - info: https://snyk.io/vuln/npm:bassmaster:20140927
   Remediation options (Use arrow keys)
@@ -33,7 +33,7 @@ Unfortunately, you can’t upgrade a deep dependency, both for technical reasons
 
 The wizard reports **multiple vulnerabilities in the hapi@10.5.0 dependency**. This typically happens when you are several versions behind the latest version, and in the meantime multiple vulnerabilities have been found and fixed. In this case, clicking [the info link](https://snyk.io/test/npm/hapi/10.5.0) will show you details for the vulnerabilities that affect hapi.
 
-```
+```console
 ? 7 vulnerabilities introduced via hapi@10.5.0
 - info: https://snyk.io/package/npm/hapi/10.5.0
   Remediation options (Use arrow keys)

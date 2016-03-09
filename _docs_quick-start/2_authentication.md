@@ -4,7 +4,7 @@ title: Authentication
 
 If this is the first time you use Snyk, the wizard will first ask you to register using your GitHub account. *Note that Snyk does not require access to your repositories*. It only requests access to your email, using GitHub as an authentication system.
 
-```
+```console
 snyk wizard
 
 Now redirecting you to our github auth page, go ahead and log in,

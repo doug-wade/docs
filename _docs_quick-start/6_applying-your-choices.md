@@ -6,7 +6,7 @@ That’s it, we’ve tackled all the issues – hurray!
 
 Before the wizard applies the requested changes, it suggests adding two steps to your Package.json workflow to keep you vulnerability free.
 
-```
+```console
 ? Add `snyk test` to package.json file to fail test on newly disclosed vulnerabilities? Yes
 ? Add `snyk protect` as a package.json installation hook to apply chosen patches on install? (Y/n)
 ```
@@ -16,7 +16,7 @@ First, the wizard suggests adding Snyk’s test to your regular `npm test` actio
 
 If you’ve chosen to patch an issue, the wizard will also suggest adding `snyk protect` to the `postinstall` step. A post installation hook runs every time you install this package’s dependencies, ensuring those dependencies are always properly patched. Note that such a hook requires adding `snyk` as a dependency (not devDependency).
 
-```
+```console
 Applying patches...
 Running `npm update`...
 Saving .snyk policy file...

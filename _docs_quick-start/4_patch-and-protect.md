@@ -6,7 +6,7 @@ Patch and Protect
 
 The next issue the wizard reports on our demo app is different.
 
-```
+```console
 ? High severity vulnerability found in handlebars@3.0.3, introduced via snyk-demo-child@0.0.1
 - from: snyk-demo-child@0.0.1 > handlebars@3.0.3
 - info: https://snyk.io/vuln/npm:handlebars:20151207
@@ -23,7 +23,7 @@ This scenario is especially common in recently disclosed vulnerabilities, as it 
 
 After we patch Handlebars, the wizard prompts about two instances of uglify-js vulnerabilities, suggesting you patch them all.
 
-```
+```console
 ? 2 vulnerabilities introduced via uglify-js
 - info: https://snyk.io/package/npm/uglify-js/2.3.6
   Remediation options (Use arrow keys)

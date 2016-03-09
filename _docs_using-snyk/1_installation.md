@@ -4,15 +4,11 @@ title: Installation
 
 Snyk is installed via npm. Run these commands to install it for local use:
 
-```
-npm install -g snyk
-```
+<div class="highlight"><pre><code class="language-console" data-lang="console">npm install -g snyk</code></pre></div>
 
 Once installed, you can perform a quick test on a public package, for instance:
 
-```
-snyk test ionic@1.6.5
-```
+<div class="highlight"><pre><code class="language-console" data-lang="console">snyk test ionic@1.6.5</code></pre></div>
 
 As you can see, Snyk found and reported several vulnerabilities in the package. For each issue found, Snyk provides the severity of the issue, a link to a detailed description, the path through which the vulnerable module got into your system, and guidance on how to fix the problem.
 

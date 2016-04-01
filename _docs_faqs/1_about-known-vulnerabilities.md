@@ -3,34 +3,23 @@ title: About known vulnerabilities
 draft: true
 ---
 
-<p>Snyk is installed via npm. Run these commands to install it for local use:</p>
+<h3 class="h4">What are known vulnerabilities?</h3>
 
-<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">npm install -g snyk</span></code></pre></div>
+<p>Known vulnerabilities are publicly disclosed security bugs, typically found and logged by users, or reported by security researchers. Being public makes these issues the easiest ones for attackers to find and exploit <a href="http://www.theregister.co.uk/2015/02/23/hp_hack_vulnerable_threat_study/">[1]</a>, and therefore very important to address.</p>
 
-<p>Once installed, you can perform a quick test on a public package, for instance:</p>
+<h3 class="h4">What are direct and deep dependencies?</h3>
+<p>Known vulnerabilities can be introduced either via a direct or via a deep dependency.</p>
+<ul>
+	<li>A direct dependency is a is a package that you've included in your own project via package.json.</li>
+	<li>A deep dependency, also referred to as an indirect, chained, or transitive dependency, is a package that you are not using directly, but one that is used by one of your direct dependencies.</li>
+</ul>
+<p>In other words, if your application is using module A, and module A is using module B, then your application is indirectly depending on module B. And if module B is vulnerable, you are vulnerable.</p>
 
-<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">snyk test ionic@1.6.5</span></code></pre></div>
+<h3 class="h4">How do you determine the severity of a vulnerability?</h3>
+<p>The severity of a vulnerability is manually assigned by our security research team. It’s based primarily on the impact of the vulnerability, and by how easy it is to exploit it.</p> 
+</p>For instance, the <a href="https://snyk.io/vuln/npm:bassmaster:20140927">bassmaster vulnerability</a> allows an attacker to execute code on your server (a “remote command execution” vulnerability), and can easily be exploited with a well crafted request, making it a high severity issue. The <a href="https://snyk.io/vuln/npm:dns-sync:20141111">dns-sync vulnerability</a> also allows remote command execution, but to exploit it an attacker needs to control the name of the host you resolve - a less likely scenario. Therefore, it was deemed medium severity.</p>
 
-<p>As you can see, Snyk found and reported several vulnerabilities in the package. For each issue found, Snyk provides the severity of the issue, a link to a detailed description, the path through which the vulnerable module got into your system, and guidance on how to fix the problem.</p>
+<h3 class="h4">Why should I monitor my projects for known vulnerabilities? </h3>
+<p>New vulnerabilities aren’t actually new security holes - they’re newly disclosed, but impact old, existing code. This means you could have new known vulnerabilities without making any code changes. <a href="https://snyk.io/docs/using-snyk/#monitor">Monitoring your projects</a> means you’ll be the first to know if you are affect by a newly disclosed vulnerability, and you can assess and act upon the vulnerability risk quickly.</p>
 
-<div class="screenshot">
-<h3 class="screenshot__label">Example output</h3>
-<pre class="code">$ snyk test
-<span class="syn--red">✗ Vulnerability found on gm@1.13.3</span>
-Info: https://snyk.io/vuln/npm:gm:20151026
-From: snyk-demo-app@latest &gt; gm@1.13.3
-<span class="syn--white syn--bold">Upgrade direct dependency gm@1.13.3 to gm@1.21.1</span>
 
-<span class="syn--red">✗ Vulnerability found on qs@0.6.6</span>
-Info: https://snyk.io/vuln/npm:qs:20140806
-From: snyk-demo-app@latest &gt; webdriverio@2.4.5 &gt; request@2.34.0 &gt; qs@0.6.6
-<span class="syn--white syn--bold">Upgrade direct dependency webdriverio@2.4.5 to webdriverio@3.0.1 (triggers upgrades to request@2.40.0 &gt; qs@1.0.0)</span>
-
-<span class="syn--red">✗ Vulnerability found on qs@0.4.2</span>
-Info: https://snyk.io/vuln/npm:qs:20140806-1
-From: snyk-demo-app@latest &gt; cucumber@0.3.0 &gt; connect@2.3.2 &gt; qs@0.4.2
-No direct dependency upgrade can address this issue.
-<span class="syn--white syn--bold">Run `snyk wizard` to explore remediation options</span></pre>
-</div>
-
-<p>In the next sections we’ll explain how to run the same test on your own projects.</p>

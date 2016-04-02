@@ -1,5 +1,5 @@
 ---
-layout: 
+layout:
 ---
 
 [
@@ -34,5 +34,5 @@ layout:
     "url"     : "/docs/faqs/{{ article.title | slugify }}",{% if article.title %}
     "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
     "content": {{ article.content | jsonify }}
-  }{% endif %}{% if forloop.last %}{% else %},{% endif %}{% endfor %}
+  }{% endif %}{% if article.draft %}{% else %}{% if forloop.last %}{% else %},{% endif %}{% endif %}{% endfor %}
 ]

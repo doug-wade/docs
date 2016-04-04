@@ -1,6 +1,5 @@
 ---
 title: About known vulnerabilities
-draft: false
 ---
 
 <h3 class="h4">What are known vulnerabilities?</h3>

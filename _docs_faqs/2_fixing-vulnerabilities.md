@@ -1,6 +1,6 @@
 ---
 title: Fixing vulnerabilities
-draft: true
+draft: false
 ---
 <h3 class="h4">What can I do if I’m vulnerable?</h3>
 

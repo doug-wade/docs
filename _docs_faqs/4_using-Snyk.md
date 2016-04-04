@@ -1,6 +1,6 @@
 ---
 title: Using Snyk
-draft: true
+draft: false
 ---
 
 <h3 class="h4">Why should I add Snyk `test` to my Continuous Integration (CI)?</h3> 

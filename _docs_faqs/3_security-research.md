@@ -1,6 +1,6 @@
 ---
 title: Security research
-draft: true
+draft: false
 ---
 
 <h3 class="h4">How do you find out about new vulnerabilities?</h3>

@@ -3,7 +3,7 @@ layout:
 ---
 
 [
-  {% for article in site.docs_landing %}{% if article.draft %}{% else %}
+  {% assign landing = site.docs_landing | where: 'draft', 'false' %}{% for landing in site.docs_landing %}{% if article.draft %}{% else %}
   {
     {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},
     {% endif %}"docs_landing" : "true",
@@ -11,7 +11,7 @@ layout:
     "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
     "content": {{ article.content | jsonify }}
   },
-  {% endif %}{% endfor %}{% for article in site.docs_quick-start %}{% if article.draft %}{% else %}
+  {% endif %}{% endfor %}{% assign quick-start = site.docs_quick-start | where: 'draft', 'false' %}{% for article in quick-start %}{% if article.draft %}{% else %}
   {
     {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},
     {% endif %}"docs_quick-start" : "true",
@@ -19,20 +19,20 @@ layout:
     "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
     "content": {{ article.content | jsonify }}
   },
-  {% endif %}{% endfor %}{% for article in site.docs_using-snyk %}{% if article.draft %}{% else %}
+  {% endif %}{% endfor %}{% assign using-snyk = site.docs_using-snyk | where: 'draft', 'false' %}{% for article in using-snyk %}{% if article.draft %}{% else %}
   {
     {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},
     {% endif %}"docs_using-snyk" : "true",
     "url"     : "/docs/using-snyk/{{ article.title | slugify }}",{% if article.title %}
     "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
     "content": {{ article.content | jsonify }}
-  }
-  {% endif %}{% if forloop.last %}{% else %},{% endif %}{% endfor %}{% for article in site.docs_faqs %}{% if article.draft %}{% else %}
+  },
+  {% endif %}{% endfor %}{% assign faqs = site.docs_faqs | where: 'draft', 'false' %}{% for article in faqs %}{% if article.draft %}{% else %}
   {
     {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},
     {% endif %}"docs_faqs" : "true",
     "url"     : "/docs/faqs/{{ article.title | slugify }}",{% if article.title %}
     "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
     "content": {{ article.content | jsonify }}
-  }{% endif %}{% if article.draft %}{% else %}{% if forloop.last %}{% else %},{% endif %}{% endif %}{% endfor %}
+  }{% endif %}{% if forloop.last %}{% else %},{% endif %}{% endfor %}
 ]

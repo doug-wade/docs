@@ -3,7 +3,7 @@ layout:
 ---
 
 [
-  {% assign landing = site.docs_landing | where: 'draft', 'false' %}{% for landing in site.docs_landing %}{% if article.draft %}{% else %}
+  {% for article in site.docs_landing %}{% if article.draft %}{% else %}
   {
     {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},
     {% endif %}"docs_landing" : "true",

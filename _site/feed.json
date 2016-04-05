@@ -1,10 +1,10 @@
 [
   
   {
-    "title" : null,
     "docs_landing" : "true",
     "url"     : "/docs/",
-    "content": null
+    "slug"     : "",
+    "content": "<p>Just getting started with Snyk? <a href=\"https://snyk.io/docs/quick-start/\" title=\"Quick start guide\">Follow this step-by-step guide</a> to get set up.</p>\n\n<p><a href=\"https://snyk.io/docs/using-snyk/\" title=\"Using Snyk\">Check our documentation</a> for details on how to make the most of Snyk.</p>\n\n<p>Need help with anything you can’t find here? <a href=\"&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#115;&#110;&#121;&#107;&#046;&#105;&#111;\">Drop us a line</a> and we’ll get right back to you.</p>\n\n<h2 id=\"cli-commands-overview\">CLI commands overview</h2>\n\n<pre><code class=\"language-console\">snyk [options] [command] [package]\n</code></pre>\n\n<p>The package argument is optional. If no package is given, Snyk will run the command against the current working directory allowing you test you non-public applications.</p>\n\n<h3 id=\"commands\">Commands</h3>\n\n<pre><code class=\"language-console\">auth ............... sign into snyk (required).\ntest ............... test for any known vulnerabilities.\nwizard ............. configure your policy file to update, auto patch and ignore vulnerabilities.\nprotect ............ protect your code from vulnerabilities and optionally suppress specific vulnerabilities.\nmonitor ............ record the state of dependencies and any vulnerabilities on snyk.io.\npolicy ............. display the Snyk policy for a package.\nsupport ............ file an issue or request support.\n</code></pre>\n\n<h3 id=\"options\">Options</h3>\n\n<pre><code class=\"language-console\">--dev .............. include devDependencies (defaults to production only)\n--ignore-policy .... ignores and resets the state of your policy file\n--dry-run .......... don't apply updates or patches during protect.\n-q, --quiet ........ silence all output.\n-h, --help ......... this help information.\n-v, --version ...... the CLI version.\n</code></pre>\n\n<h3 id=\"examples\">Examples</h3>\n\n<pre><code class=\"language-console\">snyk test\nsnyk test ionic@1.6.5\n</code></pre>\n\n<div class=\"alert alert--inline\">\n  <p>Use `snyk test` in your test scripts. If a vulnerability is found, the process will exit with a non-zero exit code.</p>\n</div>\n"
   },
   
   {

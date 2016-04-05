@@ -19,13 +19,12 @@ The package argument is optional. If no package is given, Snyk will run the comm
 ### Commands
 
 ```console
-auth ............... sign into snyk (required).
+auth [api-token].....sign into snyk.
 test ............... test for any known vulnerabilities.
 wizard ............. configure your policy file to update, auto patch and ignore vulnerabilities.
 protect ............ protect your code from vulnerabilities and optionally suppress specific vulnerabilities.
 monitor ............ record the state of dependencies and any vulnerabilities on snyk.io.
 policy ............. display the Snyk policy for a package.
-support ............ file an issue or request support.
 ```
 
 ### Options
@@ -33,6 +32,8 @@ support ............ file an issue or request support.
 ```console
 --dev .............. include devDependencies (defaults to production only)
 --ignore-policy .... ignores and resets the state of your policy file
+--trust-policies ... applies and uses ignore rules from your dependencies's Snyk policies, 
+                     otherwise ignore policies are only shown as a suggestion.
 --dry-run .......... don't apply updates or patches during protect.
 -q, --quiet ........ silence all output.
 -h, --help ......... this help information.

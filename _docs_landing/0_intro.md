@@ -2,9 +2,8 @@
 title: ""
 ---
 
-Just getting started with Snyk? <a href="https://snyk.io/docs/quick-start/" title="Quick start guide">Follow this step-by-step guide</a> to get set up.
-
-<a href="https://snyk.io/docs/using-snyk/" title="Using Snyk">Check our documentation</a> for details on how to make the most of Snyk.
+* Get started with our __<a href="https://snyk.io/docs/quick-start/" title="Quick start guide">step-by-step guide.</a>__
+* <a href="https://snyk.io/docs/using-snyk/" title="Using Snyk">__Check our full documentation on snyk.io__</a> for details.
 
 Need help with anything you can’t find here? [Drop us a line](mailto:support@snyk.io) and we’ll get right back to you.
 

@@ -3,7 +3,7 @@ title: ""
 ---
 
 * Get started with our __<a href="https://snyk.io/docs/quick-start/" title="Quick start guide">step-by-step guide.</a>__
-* <a href="https://snyk.io/docs/using-snyk/" title="Using Snyk">Check our __detailed documentation for using Snyk.__</a>
+* Check our <a href="https://snyk.io/docs/using-snyk/" title="Using Snyk"> __detailed documentation for using Snyk.__</a>
 
 Need help with anything you can’t find here? [Drop us a line](mailto:support@snyk.io) and we’ll get right back to you.
 

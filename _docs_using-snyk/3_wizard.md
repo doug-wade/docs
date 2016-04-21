@@ -2,7 +2,7 @@
 title: Wizard
 ---
 
-<p>Snyk’s <code>wizard</code> walks you through finding and fixing the known vulnerabilities in your project. It leverages the separate <a href="#test"><code>test</code></a>, <a href="#protect"><code>protect</code></a> and <a href="#monitor"><code>monitor</code></a> actions, supported by an interactive workflow. To run the wizard, simply navigate to your project folder and run <code>snyk wizard</code> like so:</p>
+<p>Snyk’s <code>wizard</code> walks you through finding and fixing the known vulnerabilities in your project. It leverages the separate <a href="#test"><code>test</code></a>, <a href="#protect"><code>protect</code></a> and <a href="#monitor"><code>monitor</code></a> actions, supported by an interactive workflow. To run the wizard, navigate to your project folder and run <code>snyk wizard</code> like so:</p>
 
 <div class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">cd ~/projects/myproj/</span>
 <span class="go">snyk wizard</span></code></pre></div>
@@ -18,7 +18,7 @@ First, it takes stock of which dependencies are locally installed, queries the s
   <li><strong>Ignore</strong> - If you believe this vulnerability is not exploitable, you can set the Snyk policy to ignore this vulnerability. By default, we will ignore the vulnerability for 30 days, to avoid easily hiding a true issue. If you want to ignore it permanently, you can manually edit the generated <code>.snyk</code> file. If neither a patch nor an upgrade are available, you can choose to ignore the issue for now, and we’ll notify you when a new patch or upgrade is available.</li>
 </ul>
 
-<p>If more than one vulnerability is introduced via the same module, then the wizard groups them. You can simply upgrade, patch or ignore all of them; or if you want to see more details, you can review each vulnerability separately.</p>
+<p>If more than one vulnerability is introduced via the same module, then the wizard groups them. You can upgrade, patch or ignore all of them; or if you want to see more details, you can review each vulnerability separately.</p>
 
 <div class="screenshot">
 <h3 class="screenshot__label">Example output</h3>

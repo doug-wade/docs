@@ -9,7 +9,7 @@ title: Using Snyk
 <h3 class="h4">How can I test a Github repository from the command-line interface tool (CLI)?</h3> 
 
 <p>Currently, we support testing public Github repositories only. 
-To test a public Github repository, just run snyk test and include the Github URL to the repo.</p>
+To test a public Github repository, run snyk test and include the Github URL to the repo.</p>
 
 <div class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">snyk test https://github.com/snyk/snyk</span></code></pre></div>
 

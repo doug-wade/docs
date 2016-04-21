@@ -17,4 +17,4 @@ https://snyk.io/login?token=9b4ae29b-d430-4d79-b9a3-dd522e77f8b9
 Waiting...
 ```
 
-Once authenticated, the wizard will get an API key to store locally and get on with the testing. The same authentication process can be done by running `snyk auth`, or running `snyk auth <api-key>` (especially useful when integrating Snyk into your build/continuous integration (CI) system).
+Once authenticated, the wizard will get an API token to store locally and get on with the testing. The same authentication process can be done by running `snyk auth`, or running `snyk auth <api-token>` (especially useful when integrating Snyk into your build/continuous integration (CI) system).

@@ -22,8 +22,9 @@ Configure your environment to include the `SNYK_TOKEN` environment variable. You
 
 **Important note:**
 
-Make sure you don't check your API token into source control, to avoid exposing it to others. Instead, use your CI environment variables to configure it.  
-See guidance for how to do this on
+Make sure you don't check your API token into source control, to avoid exposing it to others. Instead, use your CI environment variables to configure it.
+
+See guidance for how to do this on:
 
 * [Travis](https://docs.travis-ci.com/user/environment-variables/)
 * [Circle](https://circleci.com/docs/environment-variables/)

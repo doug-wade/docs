@@ -8,4 +8,4 @@ This is addressed by Snyk’s last step – monitor. The snapshot the wizard tak
 
 To keep Snyk’s understanding of your application up to date, you can run `snyk monitor` at the end of your deployment process. Doing so will take a fresh snapshot of your application, just like the wizard does, and will ensure Snyk’s alerts apply to your most recent code.
 
-You know have an overview of Snyk test, protect, and monitor, and you’ve used the wizard that walks you through fixing your vulnerabilities. If you’d like to know more, take a look at our detailed documentation, and our FAQ.
+You now have an overview of Snyk test, protect, and monitor, and you’ve used the wizard that walks you through fixing your vulnerabilities. If you’d like to know more, take a look at our detailed documentation, and our FAQ.

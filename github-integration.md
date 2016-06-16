@@ -1,4 +1,5 @@
-
+---
+---
 Snyk helps you fix vulnerabilities in your npm dependencies quickly and easily, as well as keeping you vulnerability free on an ongoing basis. Snyk is free for open source, and its testing is free for all - so you can start securing your Node.js and npm applications with just a couple of clicks.
 
 76% of Snyk users found vulnerabilities in their applications, and new vulnerabilities are disclosed regularly, putting your application at risk.

@@ -35,6 +35,6 @@ Once you're free of vulnerabilities, you need to make sure you don't add new vul
 ![Flag vulnerable packages inside pull requests](http://res.cloudinary.com/snyk/image/upload/v1466096854/features-test-in-pr.png)
 
 ## Respond to newly disclosed vulnerabilities
-New vulnerabilities are disclosed each month, uncoverting previously unknown security holes in your application. Snyk helps you quickly respond to those issues by tracking and remembering your dependencies, and alerting you as soon as a new disclosure affects you.
+New vulnerabilities are disclosed each month, uncovering previously unknown security holes in your application. Snyk helps you quickly respond to those issues by tracking and remembering your dependencies, and alerting you as soon as a new disclosure affects you.
 
 You and your team will get an email notification with all the details, and Snyk will also submit a pull request with the fix straight to your project, using the same pull request described above.

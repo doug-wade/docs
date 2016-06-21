@@ -11,10 +11,14 @@
     <div class="docs
     {% if page.section == "faqs" %}docs--faqs{% endif %}
     {% if page.section == "quick-start" %}docs--quick-start{% endif %}
-    {% if page.section == "using-snyk" %}docs--using-snyk{% endif %}">
+    {% if page.section == "using-snyk" %}docs--using-snyk{% endif %}
+    {% if page.section == "github" %}docs--github{% endif %}
+    {% if page.section == "orgs" %}docs--orgs{% endif %}
+    {% if page.section == "security" %}docs--security{% endif %}
+    {% if page.section == "ci" %}docs--ci{% endif %}">
 
       <ul class="nav nav-tree nav--docs nav--offset">
-        <li class="nav-tree__item nav--docs__item nav--docs__quick-start">
+        <!--<li class="nav-tree__item nav--docs__item nav--docs__quick-start">
           <a href="/docs/quick-start" class="nav-tree__item__link">Quick start guide</a>
           {% if page.section == "quick-start" %}
           <ul class="nav-tree__branch">{% for article in site.docs_quick-start %}{% if article.title == "" %}{% else %}
@@ -23,13 +27,53 @@
             </li>{% endif %}{% endfor %}
           </ul>
           {% endif %}
+        </li>-->
+        <li class="nav-tree__item nav--docs__item nav--docs__orgs">
+          <a href="/docs/orgs/" class="nav-tree__item__link">Organisations</a>
+          {% if page.section == "orgs" %}
+          <ul class="nav-tree__branch">{% for article in site.docs_orgs %}{% if article.title == "" %}{% else %}
+            <li class="nav-tree__item {% if article.draft %}status--draft{% endif %}">
+              <a href="/docs/orgs/#{{article.title | slugify}}" class="nav-tree__item__link">{{article.title}}</a>
+            </li>{% endif %}{% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        <li class="nav-tree__item nav--docs__item nav--docs__github">
+          <a href="/docs/github/" class="nav-tree__item__link">GitHub integration</a>
+          {% if page.section == "github" %}
+          <ul class="nav-tree__branch">{% for article in site.docs_github %}{% if article.title == "" %}{% else %}
+            <li class="nav-tree__item {% if article.draft %}status--draft{% endif %}">
+              <a href="/docs/github/#{{article.title | slugify}}" class="nav-tree__item__link">{{article.title}}</a>
+            </li>{% endif %}{% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        <li class="nav-tree__item nav--docs__item nav--docs__security">
+          <a href="/docs/security/" class="nav-tree__item__link">Security</a>
+          {% if page.section == "security" %}
+          <ul class="nav-tree__branch">{% for article in site.docs_security %}{% if article.title == "" %}{% else %}
+            <li class="nav-tree__item {% if article.draft %}status--draft{% endif %}">
+              <a href="/docs/orgs/#{{article.title | slugify}}" class="nav-tree__item__link">{{article.title}}</a>
+            </li>{% endif %}{% endfor %}
+          </ul>
+          {% endif %}
         </li>
         <li class="nav-tree__item nav--docs__item nav--docs__using-snyk">
-          <a href="/docs/using-snyk/" class="nav-tree__item__link">Using Snyk</a>
+          <a href="/docs/using-snyk/" class="nav-tree__item__link">Snyk CLI</a>
           {% if page.section == "using-snyk" %}
           <ul class="nav-tree__branch">{% for article in site.docs_using-snyk %}{% if article.title == "" %}{% else %}
             <li class="nav-tree__item {% if article.draft %}status--draft{% endif %}">
               <a href="/docs/using-snyk/#{{article.title | slugify}}" class="nav-tree__item__link">{{article.title}}</a>
+            </li>{% endif %}{% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        <li class="nav-tree__item nav--docs__item nav--docs__ci">
+          <a href="/docs/ci/" class="nav-tree__item__link">CI integration</a>
+          {% if page.section == "ci" %}
+          <ul class="nav-tree__branch">{% for article in site.docs_ci %}{% if article.title == "" %}{% else %}
+            <li class="nav-tree__item {% if article.draft %}status--draft{% endif %}">
+              <a href="/docs/ci/#{{article.title | slugify}}" class="nav-tree__item__link">{{article.title}}</a>
             </li>{% endif %}{% endfor %}
           </ul>
           {% endif %}
@@ -52,7 +96,7 @@
       {% for article in site.docs_quick-start %}
       {% if article.draft %}<div class="status--draft">{% endif %}
         {% if article.title == "" %}{% else %}<h2 id="{{article.title | slugify}}">{{ article.title }}</h2>{% endif %}
-        {{ article.content }}
+        {{ article.content | markdownify }}
       {% if article.draft %}</div><!-- .status--draft -->{% endif %}
       {% endfor %}
       {% endif %}
@@ -61,7 +105,7 @@
       {% for article in site.docs_using-snyk %}
       {% if article.draft %}<div class="status--draft">{% endif %}
         {% if article.title == "" %}{% else %}<h2 id="{{article.title | slugify}}">{{ article.title }}</h2>{% endif %}
-        {{ article.content }}
+        {{ article.content | markdownify }}
       {% if article.draft %}</div><!-- .status--draft -->{% endif %}
       {% endfor %}
       {% endif %}
@@ -70,7 +114,43 @@
       {% for article in site.docs_faqs %}
       {% if article.draft %}<div class="status--draft">{% endif %}
         {% if article.title == "" %}{% else %}<h2 id="{{article.title | slugify}}">{{ article.title }}</h2>{% endif %}
-        {{ article.content }}
+        {{ article.content | markdownify }}
+      {% if article.draft %}</div><!-- .status--draft -->{% endif %}
+      {% endfor %}
+      {% endif %}
+
+      {% if page.section == "github" %}
+      {% for article in site.docs_github %}
+      {% if article.draft %}<div class="status--draft">{% endif %}
+        {% if article.title == "" %}{% else %}<h2 id="{{article.title | slugify}}">{{ article.title }}</h2>{% endif %}
+        {{ article.content | markdownify }}
+      {% if article.draft %}</div><!-- .status--draft -->{% endif %}
+      {% endfor %}
+      {% endif %}
+
+      {% if page.section == "orgs" %}
+      {% for article in site.docs_orgs %}
+      {% if article.draft %}<div class="status--draft">{% endif %}
+        {% if article.title == "" %}{% else %}<h2 id="{{article.title | slugify}}">{{ article.title }}</h2>{% endif %}
+        {{ article.content | markdownify }}
+      {% if article.draft %}</div><!-- .status--draft -->{% endif %}
+      {% endfor %}
+      {% endif %}
+
+      {% if page.section == "security" %}
+      {% for article in site.docs_security %}
+      {% if article.draft %}<div class="status--draft">{% endif %}
+        {% if article.title == "" %}{% else %}<h2 id="{{article.title | slugify}}">{{ article.title }}</h2>{% endif %}
+        {{ article.content | markdownify }}
+      {% if article.draft %}</div><!-- .status--draft -->{% endif %}
+      {% endfor %}
+      {% endif %}
+
+      {% if page.section == "ci" %}
+      {% for article in site.docs_ci %}
+      {% if article.draft %}<div class="status--draft">{% endif %}
+        {% if article.title == "" %}{% else %}<h2 id="{{article.title | slugify}}">{{ article.title }}</h2>{% endif %}
+        {{ article.content | markdownify }}
       {% if article.draft %}</div><!-- .status--draft -->{% endif %}
       {% endfor %}
       {% endif %}
@@ -79,7 +159,7 @@
       {% for article in site.docs_landing %}
       {% if article.draft %}<div class="status--draft">{% endif %}
         {% if article.title == "" %}{% else %}<h2 id="{{article.title | slugify}}">{{ article.title }}</h2>{% endif %}
-        {{ article.content }}
+        {{ article.content | markdownify }}
       {% if article.draft %}</div><!-- .status--draft -->{% endif %}
       {% endfor %}
       {% endif %}

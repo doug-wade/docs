@@ -19,6 +19,38 @@ layout:
     "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
     "content": {{ article.content | jsonify }}
   },
+  {% endfor %}{% assign orgs = site.docs_orgs | where: 'draft', 'false' %}{% for article in orgs %}
+  {
+    {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},
+    {% endif %}"docs_orgs" : "true",
+    "url"     : "/docs/orgs/{{ article.title | slugify }}",{% if article.title %}
+    "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
+    "content": {{ article.content | jsonify }}
+  },
+  {% endfor %}{% assign security = site.docs_security | where: 'draft', 'false' %}{% for article in security %}
+  {
+    {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},
+    {% endif %}"docs_security" : "true",
+    "url"     : "/docs/security/{{ article.title | slugify }}",{% if article.title %}
+    "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
+    "content": {{ article.content | jsonify }}
+  },
+  {% endfor %}{% assign github = site.docs_github | where: 'draft', 'false' %}{% for article in github %}
+  {
+    {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},
+    {% endif %}"docs_github" : "true",
+    "url"     : "/docs/github/{{ article.title | slugify }}",{% if article.title %}
+    "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
+    "content": {{ article.content | jsonify }}
+  },
+  {% endfor %}{% assign ci = site.docs_ci | where: 'draft', 'false' %}{% for article in ci %}
+  {
+    {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},
+    {% endif %}"docs_ci" : "true",
+    "url"     : "/docs/ci/{{ article.title | slugify }}",{% if article.title %}
+    "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
+    "content": {{ article.content | jsonify }}
+  },
   {% endfor %}{% assign using-snyk = site.docs_using-snyk | where: 'draft', 'false' %}{% for article in using-snyk %}
   {
     {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},

@@ -1,5 +1,5 @@
 ---
-title: Disclosure polocy
+title: Disclosure policy
 ---
 
 We at snyk value the security community and believe that responsible disclosure of security vulnerabilities helps us ensure the security and privacy of the users.

@@ -3,7 +3,7 @@ title: ""
 ---
 
 * Get started securing your repos by __<a href="https://snyk.io/docs/github/" title="GitHub Integration">integrating Snyk with GitHub.</a>__
-* Check our  __<a href="https://snyk.io/docs/using-snyk/" title="Snyk CLI"> __detailed documentation for using Snyk CLI.__</a>__
+* Check our __<a href="https://snyk.io/docs/using-snyk/" title="Snyk CLI">detailed documentation for using Snyk CLI.</a>__
 
 Need help with anything you can’t find here? [Drop us a line](mailto:support@snyk.io) and we’ll get right back to you.
 

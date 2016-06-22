@@ -67,7 +67,7 @@
     "docs_quick-start" : "true",
     "url"     : "/docs/quick-start/monitor",
     "slug"     : "monitor",
-    "content": "<p>Now that you’re free of known vulnerabilities, there are two ways that can change. The first is adding vulnerable packages to your code, which we handle by adding <code class=\"highlighter-rouge\">snyk test</code> to your test/CI system. The second is through newly disclosed vulnerabilities. These are new disclosures of vulnerabilities in old code – the code you’re running in production!</p>\n\n<p>This is addressed by Snyk’s last step – monitor. The snapshot the wizard takes is saved on Snyk’s servers, remembering the dependencies used on this application. If a newly disclosed vulnerability affects your application, you’ll get an email alerting you to it. You can then run the wizard again to upgrade or patch as needed, and deploy the secure code.</p>\n\n<p>To keep Snyk’s understanding of your application up to date, you can run <code class=\"highlighter-rouge\">snyk monitor</code> at the end of your deployment process. Doing so will take a fresh snapshot of your application, just like the wizard does, and will ensure Snyk’s alerts apply to your most recent code.</p>\n\n<p>You know have an overview of Snyk test, protect, and monitor, and you’ve used the wizard that walks you through fixing your vulnerabilities. If you’d like to know more, take a look at our detailed documentation, and our FAQ.</p>\n"
+    "content": "<p>Now that you’re free of known vulnerabilities, there are two ways that can change. The first is adding vulnerable packages to your code, which we handle by adding <code class=\"highlighter-rouge\">snyk test</code> to your test/CI system. The second is through newly disclosed vulnerabilities. These are new disclosures of vulnerabilities in old code – the code you’re running in production!</p>\n\n<p>This is addressed by Snyk’s last step – monitor. The snapshot the wizard takes is saved on Snyk’s servers, remembering the dependencies used on this application. If a newly disclosed vulnerability affects your application, you’ll get an email alerting you to it. You can then run the wizard again to upgrade or patch as needed, and deploy the secure code.</p>\n\n<p>To keep Snyk’s understanding of your application up to date, you can run <code class=\"highlighter-rouge\">snyk monitor</code> at the end of your deployment process. Doing so will take a fresh snapshot of your application, just like the wizard does, and will ensure Snyk’s alerts apply to your most recent code.</p>\n\n<p>You now have an overview of Snyk test, protect, and monitor, and you’ve used the wizard that walks you through fixing your vulnerabilities. If you’d like to know more, take a look at our detailed documentation, and our FAQ.</p>\n"
   },
   
   {
@@ -79,18 +79,43 @@
   },
   
   {
+    "title" : "Creating a new organisation",
+    "docs_orgs" : "true",
+    "url"     : "/docs/orgs/creating-a-new-organisation",
+    "slug"     : "creating-a-new-organisation",
+    "content": "<p>You can have an unlimited number of organisations on Snyk. Each organisation can be on a different pricing plan.</p>\n\n<p>To create a new organisation, choose the ‘Create’ link in the drop-down in the top navigation. You can then name the organisation and choose a plan.</p>\n"
+  },
+  
+  {
+    "title" : "Switching between organisations",
+    "docs_orgs" : "true",
+    "url"     : "/docs/orgs/switching-between-organisations",
+    "slug"     : "switching-between-organisations",
+    "content": "<p><strong>On snyk.io:</strong></p>\n\n<ul>\n  <li>Choose the organisation you want from the drop-down menu in the top navigation.</li>\n  <li>If you add projects on snyk.io via GitHub integration, they will be added to the currently chosen organisation.</li>\n</ul>\n\n<p><strong>In the Snyk CLI:</strong></p>\n\n<ul>\n  <li>If you have only your default organisation, any projects you add or update by running <code class=\"highlighter-rouge\">snyk wizard</code> or <code class=\"highlighter-rouge\">snyk monitor</code> will be automatically associated with your default organisation.</li>\n  <li>If you have more than one organisation, you can configure which one projects should be associated with by running <code class=\"highlighter-rouge\">snyk config set org=orgname</code>.</li>\n  <li>If you would like to override this global configuration for individual runs of <code class=\"highlighter-rouge\">snyk wizard</code> or <code class=\"highlighter-rouge\">snyk monitor</code>, run <code class=\"highlighter-rouge\">snyk monitor --org=orgname</code> or <code class=\"highlighter-rouge\">snyk wizard --org=orgname</code>.</li>\n</ul>\n"
+  },
+  
+  {
+    "title" : "Managing organisations",
+    "docs_orgs" : "true",
+    "url"     : "/docs/orgs/managing-organisations",
+    "slug"     : "managing-organisations",
+    "content": "<p>In the ‘Manage organisation’ section, you can:</p>\n\n<ul>\n  <li>see how many private, public and inactive projects are in the organisation</li>\n  <li>see and manage team members</li>\n  <li>manage billing (administrator users only)</li>\n  <li>leave this organisation</li>\n  <li>delete this organisation (administrator users only)</li>\n</ul>\n"
+  },
+  
+  {
     "title" : "How Snyk finds out about new vulnerabilities",
     "docs_security" : "true",
     "url"     : "/docs/security/how-snyk-finds-out-about-new-vulnerabilities",
     "slug"     : "how-snyk-finds-out-about-new-vulnerabilities",
-    "content": "<p>We monitor existing node.js security portals and tools, such as Node Security Project, the nodejs-sec Google Group, <a href=\"\">SRC:CLR</a>, or Retire.js. We also monitor Github activity and other online sources for new vulnerabilities.</p>\n"
+    "content": "<p>We monitor existing node.js security portals and tools, such as <a href=\"https://nodesecurity.io/\">Node Security Project</a>, the <a href=\"https://groups.google.com/forum/#!forum/nodejs-sec\">nodejs-sec Google Group</a>, <a href=\"https://srcclr.com/\">SRC:CLR</a>, or <a href=\"http://retirejs.github.io/retire.js/\">Retire.js</a>. We also monitor Github activity and other online sources for new vulnerabilities.</p>\n"
   },
   
   {
+    "title" : "Snyk’s process for creating patches",
     "docs_security" : "true",
-    "url"     : "/docs/security/",
-    "slug"     : "",
-    "content": "\n"
+    "url"     : "/docs/security/snyk-s-process-for-creating-patches",
+    "slug"     : "snyk-s-process-for-creating-patches",
+    "content": "<p>Patches are created and maintained by Snyk. If the package owner has made code changes to fix the issues, our patch is based on this official fix, and we remove any cosmetic or unrelated changes. If a package owner has not addressed the vulnerability yet, we write a patch from scratch.</p>\n\n<p>Before releasing it, we verify the patch, backport it to older versions, and test that the patch hasn’t broken functionality.</p>\n\n<p>The patches are a part of <a href=\"https://github.com/Snyk/vulndb/\">Snyk’s open source vulnerability database</a>, so you can check them out before applying them. For example, the patches for the <a href=\"https://github.com/Snyk/vulndb/tree/master/data/npm/ms/20151024\">ms ReDoS vulnerability</a>. \nWe don’t have patches for every case - if you need one that’s missing, <a href=\"mailto:contact@snyk.io\">let us know</a>. We also <a href=\"https://github.com/Snyk/vulndb/blob/master/CONTRIBUTING.md\">accept pull requests</a>!</p>\n"
   },
   
   {
@@ -110,11 +135,27 @@
   },
   
   {
-    "title" : "Section One",
+    "title" : "Integration features",
+    "docs_github" : "true",
+    "url"     : "/docs/github/integration-features",
+    "slug"     : "integration-features",
+    "content": "<p>For each integrated repo, you:</p>\n\n<ul>\n  <li>will see Snyk tests in your pull request if new dependencies are added (i.e. when the package.json is modified)</li>\n  <li>get email alerts and a Snyk pull request with fixes when new vulnerabilities that affect your repo are disclosed</li>\n  <li>can trigger a Snyk pull request with fixes yourself from the test report page or the project page for your repo on snyk.io</li>\n</ul>\n\n<p><strong>Snyk tests in your pull requests</strong></p>\n\n<p>Snyk tests will be visible in pull requests on repos that you have added to Snyk. If the dependencies in the package.json change, Snyk runs a test and you can see if it passed or failed in the PR.</p>\n\n<p>You can set if it should fail for all vulnerabilities, or only for a certain severity level:</p>\n\n<ul>\n  <li>go to the repo’s .snyk file</li>\n  <li>add <code class=\"highlighter-rouge\">failThreshold: high</code> if you want only high severity vulnerabilities to cause tests to fail.</li>\n  <li><code class=\"highlighter-rouge\">failThreshold: medium</code> will fail test when both medium and high severity vulnerabilities are found.</li>\n  <li>It should look like here in this example.</li>\n</ul>\n\n<p><strong>Fix vulnerabilities with Snyk pull requests</strong></p>\n\n<p>When viewing a Snyk test report for a repo that you own, or when looking at a project that you are monitoring with Snyk, you’ll see a button to ‘Fix vulnerabilities’.</p>\n\n<p>This button allows you to generate a Snyk pull request with the minimal changes needed to fix the vulnerabilities affecting the repo. Here’s an example.</p>\n\n<p><strong>Get a Snyk pull request when newly disclosed vulnerabilities affect you</strong></p>\n\n<p>Whenever a vulnerability is disclosed that affects a repo you’re monitoring, Snyk will not only email you about it, but also generate a Snyk pull request that addresses the vulnerabilities. It’s the same pull request as in the example above.</p>\n"
+  },
+  
+  {
+    "title" : "Disabling the GitHub integration",
+    "docs_github" : "true",
+    "url"     : "/docs/github/disabling-the-github-integration",
+    "slug"     : "disabling-the-github-integration",
+    "content": "<p>If you don’t want to monitor a GitHub repo anymore, you can stop monitoring this project via the project settings. The project will be set to inactive, and you’ll no longer get alerts, pull requests, or Snyk test in your pull requests. The web hook that enables the GitHub integration for this repo will be removed.</p>\n\n<p>You can re-start monitoring at any time.</p>\n"
+  },
+  
+  {
+    "title" : "Integrating Snyk into your build system",
     "docs_ci" : "true",
-    "url"     : "/docs/ci/section-one",
-    "slug"     : "section-one",
-    "content": "<p>This is some content.</p>\n"
+    "url"     : "/docs/ci/integrating-snyk-into-your-build-system",
+    "slug"     : "integrating-snyk-into-your-build-system",
+    "content": "<p>To continuously avoid known vulnerabilities in your dependencies, integrate Snyk into your continuous integration (a.k.a. build) system. Here are the steps required to to so:</p>\n\n<ol>\n  <li>Install the Snyk utility using <code class=\"highlighter-rouge\">npm install -g snyk</code>.</li>\n  <li>Run <code class=\"highlighter-rouge\">snyk wizard</code> in the directory of your project following the prompts which will also generate a <code class=\"highlighter-rouge\">.snyk</code> policy file.</li>\n  <li>Ensure the <code class=\"highlighter-rouge\">.snyk</code> file you generated was added to your source control (<code class=\"highlighter-rouge\">git add .snyk</code>).</li>\n  <li>If you selected to, Snyk will include <code class=\"highlighter-rouge\">snyk test</code> as part of your <code class=\"highlighter-rouge\">npm test</code> command, so if there are new vulnerabilities in the future, your CI will fail, protecting you from introducing vulnerabilities to production. Alternatively, you can add <code class=\"highlighter-rouge\">snyk test</code> to any other CI test platform you use.</li>\n</ol>\n\n<p>If you monitor a project with Snyk, you’ll get notified if your project’s dependencies are affected by newly disclosed vulnerabilities. To make sure this list of dependencies is up to date, refresh it continuously by running <code class=\"highlighter-rouge\">snyk monitor</code> in your deployment process. You’ll also need to authenticate to Snyk, so we can know where to update the dependencies.</p>\n\n<p>To do both, add the following to your deployment scripts:</p>\n\n<div class=\"highlighter-rouge\"><pre class=\"highlight\"><code>snyk auth $SNYK_TOKEN\nsnyk monitor\n</code></pre>\n</div>\n\n<p>Configure your environment to include the <code class=\"highlighter-rouge\">SNYK_TOKEN</code> environment variable. You can find your API token on the dashboard after logging in.</p>\n\n<p><strong>Important note:</strong></p>\n\n<p>Make sure you don’t check your API token into source control, to avoid exposing it to others. Instead, use your CI environment variables to configure it.</p>\n\n<p>See guidance for how to do this on:</p>\n\n<ul>\n  <li><a href=\"https://docs.travis-ci.com/user/environment-variables/\">Travis</a></li>\n  <li><a href=\"https://circleci.com/docs/environment-variables/\">Circle</a></li>\n  <li><a href=\"https://codeship.com/documentation/continuous-integration/set-environment-variables/\">Codeship</a></li>\n  <li><a href=\"https://wiki.jenkins-ci.org/display/JENKINS/Building+a+software+project#Buildingasoftwareproject-JenkinsSetEnvironmentVariables\">Jenkins</a></li>\n  <li><a href=\"https://confluence.atlassian.com/bamboo/bamboo-variables-289277087.html\">Bamboo</a></li>\n</ul>\n\n<p>You can find others through an easy <a href=\"https://www.google.co.uk/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=setting+up+env+variables+in+CI\">Google search</a>.</p>\n"
   },
   
   {
@@ -209,13 +250,6 @@
     "url"     : "/docs/faqs/fixing-vulnerabilities",
     "slug"     : "fixing-vulnerabilities",
     "content": "<h3 class=\"h4\">What can I do if I’m vulnerable?</h3>\n\n<p>If possible, the cleanest and best way to address a vulnerability is to upgrade to a vulnerability-free version of the module you’re using. In most cases, disclosed vulnerabilities are fixed shortly after they’re discovered, and all you need to do is upgrade to the relevant version.</p>\n\n<p>If the vulnerability is introduced by a deep (i.e. indirect) dependency, you can’t upgrade it away for technical reasons, and for fear of breaking functionality. Snyk's <a href=\"https://snyk.io/docs/using-snyk/#wizard\"><code>wizard</code></a> will guide you to the best direct dependency upgrade that will trigger the necessary deep dependency upgrade.</p>\n\n<p>If you can’t upgrade, because there is no sufficient direct upgrade available, or because the upgrade includes breaking changes you can’t take on right now, your next best option is to apply a patch. A patch changes the locally installed package file to fix the vulnerability. \nSnyk's <a href=\"https://snyk.io/docs/using-snyk/#wizard\"><code>wizard</code></a> will detect the best remediation option for each vulnerability for you; you can also find remediation guidance on the report page (for your monitored project, or for a public package you've tested) on the Snyk website.</p>\n\n<h3 class=\"h4\">What does patching mean?</h3>\n\n<p>A patch will make the minimum changes required to your locally installed package files, to fix the vulnerability. Patching is a good option to fix vulnerabilities when you can’t upgrade. \nIf you’re monitoring your project, we will notify you once an upgrade becomes available.</p>\n\n<h3 class=\"h4\">Can patching break my code?</h3>\n\n<p>We test all patches we release rigorously, and keep the changes a patch makes to your code to a minimum. We haven’t seen a single case where our patches broke intended functionality. However, we can’t guarantee that a patch won’t break something. If you are unsure, it’s best to take a look at the patch before applying it.</p>\n\n<h3 class=\"h4\">When I can choose, how should I decide whether to upgrade or patch?</h3>\n\n<p>An upgrade is usually the best way to fix a vulnerability. If both an upgrade and a patch are available, Snyk will usually recommend the upgrade. However, Snyk's <a href=\"https://snyk.io/docs/using-snyk/#wizard\"><code>wizard</code></a> lets you choose to patch, even if an upgrade is available. You might want to patch if an upgrade would be a potentially breaking change (we highlight if this is the case), or if you have other reasons to not upgrade for now.</p>\n<p>If you’re unsure and would like to assess the impact before applying a fix, you can get details for each vulnerability on our website.</p>\n\n<h3 class=\"h4\">What if there is no upgrade or patch available?</h3>\n\n<p>Assess the issue, and weigh up risk against effort. If the risk is high, you could remove the dependency. Using `snyk wizard`, you can ignore the vulnerability for 30 days, adding a reason why. Snyk will ask you again what to do in 30 days time; and if you monitor the project, we will notify you if any upgrades or patches become available.</p>\n\n<p>If you decide that the vulnerability is not an issue (for instance, because a component is not really deployed to production), you can manually edit the Snyk policy (.snyk) file to use a far-future expiry date for this instance. Note that Snyk does not test devDependencies by default, avoiding most such red herrings.</p>\n\n"
-  },
-  {
-    "title" : "Security research",
-    "docs_faqs" : "true",
-    "url"     : "/docs/faqs/security-research",
-    "slug"     : "security-research",
-    "content": "<h3 class=\"h4\">How do you find out about new vulnerabilities?</h3>\n\n<p>We monitor existing node.js security portals and tools, such as <a href=\"https://nodesecurity.io/\">Node Security Project</a>, the <a href=\"https://groups.google.com/forum/#!forum/nodejs-sec\">nodejs-sec Google Group</a>, <a href=\"https://srcclr.com/\">SRC:CLR</a>, or <a href=\"http://retirejs.github.io/retire.js/\">Retire.js</a>. We also monitor Github activity and other online sources for new vulnerabilities.</p>\n\n<h3 class=\"h4\">Where does Snyk get patches from?</h3>\n\n<p>Patches are created and maintained by Snyk. If the package owner has made code changes to fix the issues, our patch is based on this official fix, and we remove any cosmetic or unrelated changes. If a package owner has not addressed the vulnerability yet, we write a patch from scratch.</p>\n\n<p>Before releasing it, we verify the patch, backport it to older versions, and test that the patch hasn’t broken functionality.</p>\n\n<p>The patches are a part of <a href=\"https://github.com/Snyk/vulndb/\">Snyk’s open source vulnerability database</a>, so you can check them out before applying them. For example, the patches for the <a href=\"https://github.com/Snyk/vulndb/tree/master/data/npm/ms/20151024\">ms ReDoS vulnerability</a>. \nWe don’t have patches for every case - if you need one that’s missing, <a href=\"mailto:contact@snyk.io\">let us know</a>. We also <a href=\"https://github.com/Snyk/vulndb/blob/master/CONTRIBUTING.md\">accept pull requests</a>!</p>\n"
   },
   {
     "title" : "Using Snyk",

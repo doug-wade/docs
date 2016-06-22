@@ -3,6 +3,7 @@ title: Integration features
 ---
 
 For each integrated repo, you: 
+
 * will see Snyk tests in your pull request if new dependencies are added (i.e. when the package.json is modified)
 * get email alerts and a Snyk pull request with fixes when new vulnerabilities that affect your repo are disclosed
 * can trigger a Snyk pull request with fixes yourself from the test report page or the project page for your repo on snyk.io
@@ -12,6 +13,7 @@ For each integrated repo, you:
 Snyk tests will be visible in pull requests on repos that you have added to Snyk. If the dependencies in the package.json change, Snyk runs a test and you can see if it passed or failed in the PR. 
 
 You can set if it should fail for all vulnerabilities, or only for a certain severity level:
+
 * go to the repo's .snyk file
 * add `failThreshold: high` if you want only high severity vulnerabilities to cause tests to fail. 
 * `failThreshold: medium` will fail test when both medium and high severity vulnerabilities are found. 

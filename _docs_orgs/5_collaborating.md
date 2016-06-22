@@ -1,6 +1,5 @@
 ---
 title: Collaborating with team members
-draft: true
 ---
 
 Go to the ‘Members’ tab in the ‘Manage organisation’ section to invite new team members.

@@ -3,6 +3,8 @@ title: How to integrate GitHub to test and monitor your repositories
 ---
 
 You can add your GitHub repos and quickly test them, or decide which ones you’d like to continously monitor with Snyk.
+![alt text](http://res.cloudinary.com/snyk/image/upload/c_scale,w_431/v1466629386/docs-find_scaled.jpg "Adding your GH repos")
+
 
 1. Click the “Test my GitHub repositories button on the Homepage or Test page, or click “Monitor my GitHub repositories” on the Projects page. You can also add more repos from the Dashboard.
 2. You need to grant Snyk additional GitHub permissions. If you haven’t granted permissions yet, you need to do so on GitHub.

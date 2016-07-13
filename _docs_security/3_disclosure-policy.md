@@ -48,7 +48,7 @@ As mentioned above, you can report issues simply by emailing us at [report@snyk.
 
 If possible, we recommend you encrypt such vulnerabiltiiy disclosures using the following PGP key:
 
-```
+``` language-markup
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBFeF/s0BEADCn8LlbRrbKaKlrq1ss0nbfcs3mtRAAZeQFb1BAArCD5ycdJWM

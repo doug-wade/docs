@@ -10,7 +10,7 @@ Security vulnerabilities can be reported to us, and we will manage the responsib
 
 ### 1. Report
 
-Receiving the submitted vulnerability report from the researcher/reporter.
+Receiving the submitted vulnerability report from the researcher/reporter, sent to [report@snyk.io](mailto:report@snyk.io).
 Snyk will verify and document each reported vulnerability prior to developer notification.
 
 ### 2. Developer Notification
@@ -44,7 +44,10 @@ During the Public Disclosure phase Snyk, and optimally the developer, will disse
 
 ### 5. PGP Key
 
-E-mail your encrypted message to report@snyk.io and a member of the team will review your confidential report.
+As mentioned above, you can report issues simply by emailing us at [report@snyk.io](mailto:report@snyk.io), and a member of the Snyk team will review your confidential report.
+
+If possible, we recommend you encrypt such vulnerabiltiiy disclosures using the following PGP key:
+
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 

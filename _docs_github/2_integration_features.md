@@ -12,7 +12,7 @@ For each integrated repo, you:
 
 Snyk tests will be visible in pull requests on repos that you have added to Snyk. If the dependencies in the package.json change, Snyk runs a test and you can see if it passed or failed in the PR.
 
-![alt text](https://res.cloudinary.com/snyk/image/upload/f_auto,q_auto,c_scale,h_209/v1466629385/docs-prevent_scaled.jpg "Snyk tests in pull requests")
+![Snyk tests in pull requests](https://res.cloudinary.com/snyk/image/upload/f_auto,q_auto,c_scale,h_209/v1466629385/docs-prevent_scaled.jpg)
 
 You can set if it should fail for all vulnerabilities, or only for a certain severity level:
 
@@ -21,17 +21,17 @@ You can set if it should fail for all vulnerabilities, or only for a certain sev
 * `failThreshold: medium` will fail test when both medium and high severity vulnerabilities are found.
 * It should look like here in this example:
 
-![alt text](https://res.cloudinary.com/snyk/image/upload/f_auto,q_auto,w_auto/v1466629959/docs-dotsnykfile.png "Fail threshold in .snyk file")
+![Fail threshold in .snyk file](https://res.cloudinary.com/snyk/image/upload/f_auto,q_auto,w_auto/v1466629959/docs-dotsnykfile.png)
 
 **Fix vulnerabilities with Snyk pull requests**
 
 When viewing a Snyk test report for a repo that you own, or when looking at a project that you are monitoring with Snyk, you’ll see a button to ‘Fix vulnerabilities’.
 
-![alt text](https://res.cloudinary.com/snyk/image/upload/f_auto,q_auto,c_scale,w_743/v1466629385/docs-fix-vulnerabilities-button.png "Fix button")
+![Fix button](https://res.cloudinary.com/snyk/image/upload/f_auto,q_auto,c_scale,w_743/v1466629385/docs-fix-vulnerabilities-button.png)
 
 This button allows you to generate a Snyk pull request with the minimal changes needed to fix the vulnerabilities affecting the repo. Here’s an example.
 
-![alt text](https://res.cloudinary.com/snyk/image/upload/f_auto,q_auto,w_auto/v1466629389/docs-alert_scaled.jpg "Snyk remediation PR")
+![Snyk remediation PR](https://res.cloudinary.com/snyk/image/upload/f_auto,q_auto,w_auto/v1466629389/docs-alert_scaled.jpg)
 
 **Get a Snyk pull request when newly disclosed vulnerabilities affect you**
 

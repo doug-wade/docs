@@ -7,7 +7,7 @@ Go to the ‘Members’ tab in the ‘Manage organisation’ section to invite n
 * The Free and Starter plan only have administrators.
 * The Team, Pro and Enterprise plan have administrators and collaborators.
 
-![alt text](https://res.cloudinary.com/snyk/image/upload/f_auto,q_auto,w_auto/v1466629385/docs-collaborate_scaled.jpg "Team members")
+![Team members](https://res.cloudinary.com/snyk/image/upload/f_auto,q_auto,w_auto/v1466629385/docs-collaborate_scaled.jpg)
 
 <table class="table-responsive">
   <thead>

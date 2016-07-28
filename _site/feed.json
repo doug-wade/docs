@@ -234,7 +234,7 @@
     "docs_using-snyk" : "true",
     "url"     : "/docs/using-snyk/badge",
     "slug"     : "badge",
-    "content": "<p>Once you’re vulnerability free, you can put a badge on your README showing your package has no known security holes. This will show your users you care about security, and tell them that they should care too.</p>\n\n<p>If there are no vulnerabilities, this is indicated by a green badge.</p>\n\n<p><a class=\"link--unstyled\" href=\"https://snyk.io/test/npm/name\"><img src=\"https://snyk.io/test/npm/name/badge.svg\" alt=\"Known Vulnerabilities\" data-canonical-src=\"https://snyk.io/test/npm/name/\" style=\"max-width:100%;\" /></a></p>\n\n<p>If vulnerabilities have been found, the red badge will show the number of vulnerabilities.</p>\n\n<p><a class=\"link--unstyled\" href=\"https://snyk.io/test/npm/jsbin\"><img src=\"https://snyk.io/test/npm/jsbin/badge.svg\" alt=\"Known Vulnerabilities\" data-canonical-src=\"https://snyk.io/test/npm/jsbin/\" style=\"max-width:100%;\" /></a></p>\n\n<p><em>Note:</em> The badge works off the npm package, and does not factor in .snyk files yet. (This means that ignored vulnerabilities will not be taken into account).</p>\n\n<p>Get the badge by copying the relevant snippet below and replacing “name” with the name of your package.</p>\n\n<h3 id=\"html\">HTML:</h3>\n\n<div class=\"highlighter-rouge\"><pre class=\"highlight\"><code><span class=\"nt\">&lt;img</span> <span class=\"na\">src=</span><span class=\"s\">\"https://snyk.io/test/npm/name/badge.svg\"</span> <span class=\"na\">alt=</span><span class=\"s\">\"Known Vulnerabilities\"</span> <span class=\"na\">data-canonical-src=</span><span class=\"s\">\"https://snyk.io/test/npm/name\"</span> <span class=\"na\">style=</span><span class=\"s\">\"max-width:100%;\"</span><span class=\"nt\">/&gt;</span>\n</code></pre>\n</div>\n\n<h3 id=\"markdown\">Markdown:</h3>\n\n<div class=\"highlighter-rouge\"><pre class=\"highlight\"><code><span class=\"p\">[</span><span class=\"nv\">![Known Vulnerabilities</span><span class=\"p\">](</span><span class=\"sx\">https://snyk.io/test/npm/name/badge.svg</span><span class=\"p\">)</span>](https://snyk.io/test/npm/name)\n</code></pre>\n</div>\n"
+    "content": "<p>Once you’re vulnerability free, you can put a badge on your README showing your package has no known security holes. This will show your users you care about security, and tell them that they should care too.</p>\n\n<p>Read more about configuring badges in the <a href=\"/docs/badges/\">badges section</a>.</p>\n"
   },
   
   {
@@ -243,6 +243,38 @@
     "url"     : "/docs/using-snyk/credits",
     "slug"     : "credits",
     "content": "<p>While we use multiple sources to determine vulnerabilities, the primary (current) source is the <a href=\"http://nodesecurity.io\">Node Security project</a>.</p>\n"
+  },
+  
+  {
+    "title" : "Badges",
+    "docs_badges" : "true",
+    "url"     : "/docs/badges/badges",
+    "slug"     : "badges",
+    "content": "<p>Once you’re vulnerability free, you can put a badge on your README showing your package has no known security holes. This will show your users you care about security, and tell them that they should care too.</p>\n\n<p>If there are no vulnerabilities, this is indicated by a green badge.</p>\n\n<p><a class=\"link--unstyled\" href=\"https://snyk.io/test/npm/name\"><img src=\"https://snyk.io/test/npm/name/badge.svg\" alt=\"Known Vulnerabilities\" data-canonical-src=\"https://snyk.io/test/npm/name/\" style=\"max-width:100%;\" /></a></p>\n\n<p>If vulnerabilities have been found, the red badge will show the number of vulnerabilities.</p>\n\n<p><a class=\"link--unstyled\" href=\"https://snyk.io/test/npm/jsbin\"><img src=\"https://snyk.io/test/npm/jsbin/badge.svg\" alt=\"Known Vulnerabilities\" data-canonical-src=\"https://snyk.io/test/npm/jsbin/\" style=\"max-width:100%;\" /></a></p>\n"
+  },
+  
+  {
+    "title" : "npm badge",
+    "docs_badges" : "true",
+    "url"     : "/docs/badges/npm-badge",
+    "slug"     : "npm-badge",
+    "content": "<p>To show a badge for a given npm package, copy the relevant snippet below and replace “name” with the name of your package.</p>\n\n<h3 id=\"html\">HTML:</h3>\n\n<div class=\"highlighter-rouge\"><pre class=\"highlight\"><code><span class=\"nt\">&lt;img</span> <span class=\"na\">src=</span><span class=\"s\">\"https://snyk.io/test/npm/name/badge.svg\"</span> <span class=\"na\">alt=</span><span class=\"s\">\"Known Vulnerabilities\"</span> <span class=\"na\">data-canonical-src=</span><span class=\"s\">\"https://snyk.io/test/npm/name\"</span> <span class=\"na\">style=</span><span class=\"s\">\"max-width:100%;\"</span><span class=\"nt\">/&gt;</span>\n</code></pre>\n</div>\n\n<h3 id=\"markdown\">Markdown:</h3>\n\n<div class=\"highlighter-rouge\"><pre class=\"highlight\"><code><span class=\"p\">[</span><span class=\"nv\">![Known Vulnerabilities</span><span class=\"p\">](</span><span class=\"sx\">https://snyk.io/test/npm/name/badge.svg</span><span class=\"p\">)</span>](https://snyk.io/test/npm/name)\n</code></pre>\n</div>\n\n<p>The badge will reflect the vulnerability state of the latest version of this package.\nTo show the vulnerability state of a specific package, you can specify the specific version in the URL.</p>\n\n<p>For example, to test version <code class=\"highlighter-rouge\">1.2.3</code> of package <code class=\"highlighter-rouge\">name</code>, use the URL <code class=\"highlighter-rouge\">https://snyk.io/test/npm/name/1.2.3/badge.svg</code>.</p>\n"
+  },
+  
+  {
+    "title" : "GitHub badge",
+    "docs_badges" : "true",
+    "url"     : "/docs/badges/github-badge",
+    "slug"     : "github-badge",
+    "content": "<p>Badges for GitHub repositories work the same as npm badges, with a slightly different URL.</p>\n\n<p>To show a badge for a given GitHub repository, copy the relevant snippet below and replace “user/name” with the GitHub username and repo you want to test.</p>\n\n<h3 id=\"html\">HTML:</h3>\n\n<div class=\"highlighter-rouge\"><pre class=\"highlight\"><code><span class=\"nt\">&lt;img</span> <span class=\"na\">src=</span><span class=\"s\">\"https://snyk.io/test/github/snyk/goof/badge.svg\"</span> <span class=\"na\">alt=</span><span class=\"s\">\"Known Vulnerabilities\"</span> <span class=\"na\">data-canonical-src=</span><span class=\"s\">\"https://snyk.io/test/github/snyk/goof\"</span> <span class=\"na\">style=</span><span class=\"s\">\"max-width:100%;\"</span><span class=\"nt\">/&gt;</span>\n</code></pre>\n</div>\n\n<h3 id=\"markdown\">Markdown:</h3>\n\n<div class=\"highlighter-rouge\"><pre class=\"highlight\"><code><span class=\"p\">[</span><span class=\"nv\">![Known Vulnerabilities</span><span class=\"p\">](</span><span class=\"sx\">https://snyk.io/test/github/snyk/goof/badge.svg</span><span class=\"p\">)</span>](https://snyk.io/test/github/snyk/goof)\n</code></pre>\n</div>\n\n<p>The badge will reflect the vulnerability state of the latest commit on the <code class=\"highlighter-rouge\">master</code> branch.\nTo show the vulnerability state of a specific branch, release or tag, simply add its name after the repo name in the URL.</p>\n\n<p>For example, to show a badge for the <code class=\"highlighter-rouge\">4.x</code> branch of the <code class=\"highlighter-rouge\">express</code> repo, use the URL <code class=\"highlighter-rouge\">https://snyk.io/test/github/expressjs/express/4.x/badge.svg</code>.</p>\n"
+  },
+  
+  {
+    "title" : "Private packages and repos",
+    "docs_badges" : "true",
+    "url"     : "/docs/badges/private-packages-and-repos",
+    "slug"     : "private-packages-and-repos",
+    "content": "<p>Badges currently only work for public npm packages and GitHub repositories, and will fail if pointed at a private repository.</p>\n\n<p>To continuously watch for vulnerabilities in your GitHub repositories, both public and private, consider <a href=\"/docs/github/\">integrating them with Snyk</a>.</p>\n"
   },
   
   {

@@ -170,7 +170,7 @@
     "docs_using-snyk" : "true",
     "url"     : "/docs/using-snyk/",
     "slug"     : "",
-    "content": "<p>Snyk helps you find and fix known vulnerabilities in your Node.js dependencies, both ad hoc and as part of your CI (Build) system.</p>\n\n<p>Note: Snyk is currently in beta. <a href=\"&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#115;&#110;&#121;&#107;&#046;&#105;&#111;\">Email us your feedback</a>.</p>\n"
+    "content": "<p>Snyk helps you find and fix known vulnerabilities in your Node.js dependencies, both ad hoc and as part of your CI (Build) system.</p>\n\n"
   },
   
   {

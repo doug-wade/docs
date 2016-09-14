@@ -67,7 +67,7 @@ layout:
     "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
     "content": {{ article.content | jsonify }}
   },
-  {% endfor %}{% assign badges = site.docs_bitbucket | where: 'draft', 'false' %}{% for article in bitbucket %}
+  {% endfor %}{% assign bitbucket = site.docs_bitbucket | where: 'draft', 'false' %}{% for article in bitbucket %}
   {
     {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},
     {% endif %}"docs_bitbucket" : "true",

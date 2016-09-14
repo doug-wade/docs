@@ -115,7 +115,7 @@
     "docs_security" : "true",
     "url"     : "/docs/security/how-snyk-finds-out-about-new-vulnerabilities",
     "slug"     : "how-snyk-finds-out-about-new-vulnerabilities",
-    "content": "<p>We monitor existing node.js security portals and tools, such as <a href=\"https://nodesecurity.io/\">Node Security Project</a>, the <a href=\"https://groups.google.com/forum/#!forum/nodejs-sec\">nodejs-sec Google Group</a>, <a href=\"https://srcclr.com/\">SRC:CLR</a>, or <a href=\"http://retirejs.github.io/retire.js/\">Retire.js</a>. We also monitor Github activity and other online sources for new vulnerabilities.</p>\n"
+    "content": "<p>We monitor existing node.js security portals and tools, such as <a href=\"https://nodesecurity.io/\">Node Security Project</a>, the <a href=\"https://groups.google.com/forum/#!forum/nodejs-sec\">nodejs-sec Google Group</a>, or <a href=\"http://retirejs.github.io/retire.js/\">Retire.js</a>. We also monitor Github activity and other online sources for new vulnerabilities.</p>\n"
   },
   
   {
@@ -274,6 +274,14 @@
     "url"     : "/docs/badges/private-packages-and-repos",
     "slug"     : "private-packages-and-repos",
     "content": "<p>Badges currently only work for public npm packages and GitHub repositories, and will fail if pointed at a private repository.</p>\n\n<p>To continuously watch for vulnerabilities in your GitHub repositories, both public and private, consider <a href=\"/docs/github/\">integrating them with Snyk</a>.</p>\n"
+  },
+  
+  {
+    "title" : "Bitbucket Pipelines",
+    "docs_bitbucket" : "true",
+    "url"     : "/docs/bitbucket/bitbucket-pipelines",
+    "slug"     : "bitbucket-pipelines",
+    "content": "<p>Bitbucket Pipelines</p>\n"
   },
   
   {

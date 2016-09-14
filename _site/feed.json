@@ -277,10 +277,10 @@
   },
   
   {
-    "title" : "Bitbucket Pipelines",
+    "title" : "Setup",
     "docs_bitbucket" : "true",
-    "url"     : "/docs/bitbucket/bitbucket-pipelines",
-    "slug"     : "bitbucket-pipelines",
+    "url"     : "/docs/bitbucket/setup",
+    "slug"     : "setup",
     "content": "<p>Bitbucket Pipelines</p>\n"
   },
   

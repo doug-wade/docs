@@ -1,5 +1,5 @@
 ---
-title: Bitbucket Pipelines
+title: Setup
 ---
 
 <p>Bitbucket Pipelines</p>

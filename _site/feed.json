@@ -277,11 +277,34 @@
   },
   
   {
-    "title" : "Bitbucket Pipelines and Snyk integration",
     "docs_bitbucket" : "true",
-    "url"     : "/docs/bitbucket/bitbucket-pipelines-and-snyk-integration",
-    "slug"     : "bitbucket-pipelines-and-snyk-integration",
-    "content": "<p>By integrating Snyk into <a href=\"https://bitbucket.org/product/features/pipelines\">Bitbucket Pipelines</a>, you can continuously monitor your codebase for known vulnerabilities in your dependencies.</p>\n\n<p>Here are the steps required to set it up:</p>\n\n<h3 id=\"step-1\">Step 1</h3>\n\n<ol>\n  <li>Install the Snyk utility using <code class=\"highlighter-rouge\">npm install -g snyk</code>.</li>\n  <li>Run <code class=\"highlighter-rouge\">snyk wizard</code> in the directory of your project following the prompts which will also generate a <code class=\"highlighter-rouge\">.snyk</code> policy file.</li>\n  <li>Ensure the <code class=\"highlighter-rouge\">.snyk</code> file you generated was added to your source control (<code class=\"highlighter-rouge\">git add .snyk</code>).</li>\n  <li>If you selected to, Snyk will include <code class=\"highlighter-rouge\">snyk test</code> as part of your <code class=\"highlighter-rouge\">npm test</code> command, so if there are new vulnerabilities in the future, BitBucket pipelines will fail.</li>\n</ol>\n\n<h3 id=\"step-2\">Step 2</h3>\n\n<p>On Bitbucket, add the Bitbucket Pipelines addon and enable it for the repository in question.</p>\n\n<p>Use the <code class=\"highlighter-rouge\">bitbucket-pipelines.yml</code> from <a href=\"https://bitbucket.org/johannakoll/snyk-pipelines\">the snyk-pipelines repository</a>.</p>\n\n<p>If you want to adapt an existing <code class=\"highlighter-rouge\">bitbucket-pipelines.yml</code> file, you should add the following lines to <code class=\"highlighter-rouge\">pipelines.default.step.script</code>, before <code class=\"highlighter-rouge\">npm test</code>:</p>\n\n<p><code class=\"highlighter-rouge\">yaml\n# install the snyk module\n- npm install -g snyk\n# run snyk protect to apply any patches\n- snyk protect\n</code></p>\n\n<h3 id=\"step-3\">Step 3</h3>\n\n<p>Enable pipelines</p>\n\n<p>Bitbucket Pipelines will now apply any patches you specified when you ran <code class=\"highlighter-rouge\">snyk wizard</code> and will pass if there are no known vulnerabilities in your dependencies, or fail if any are found.</p>\n\n<p>For more information about using the Snyk CLI, read <a href=\"/docs/using-snyk/\">the documentation on Snyk CLI</a></p>\n"
+    "url"     : "/docs/bitbucket/",
+    "slug"     : "",
+    "content": "<p>By integrating Snyk into <a href=\"https://bitbucket.org/product/features/pipelines\">Bitbucket Pipelines</a>, you can continuously monitor your codebase for known vulnerabilities in your dependencies.</p>\n"
+  },
+  
+  {
+    "title" : "Creating a policy file",
+    "docs_bitbucket" : "true",
+    "url"     : "/docs/bitbucket/creating-a-policy-file",
+    "slug"     : "creating-a-policy-file",
+    "content": "<ol>\n  <li>Install the Snyk utility using <code class=\"highlighter-rouge\">npm install -g snyk</code>.</li>\n  <li>Run <code class=\"highlighter-rouge\">snyk wizard</code> in the directory of your project following the prompts which will also generate a <code class=\"highlighter-rouge\">.snyk</code> policy file.</li>\n  <li>Ensure the <code class=\"highlighter-rouge\">.snyk</code> file you generated was added to your source control (<code class=\"highlighter-rouge\">git add .snyk</code>).</li>\n  <li>If you selected to, Snyk will include <code class=\"highlighter-rouge\">snyk test</code> as part of your <code class=\"highlighter-rouge\">npm test</code> command, so if there are new vulnerabilities in the future, BitBucket pipelines will fail.</li>\n</ol>\n"
+  },
+  
+  {
+    "title" : "Configure BitBucket Pipelines",
+    "docs_bitbucket" : "true",
+    "url"     : "/docs/bitbucket/configure-bitbucket-pipelines",
+    "slug"     : "configure-bitbucket-pipelines",
+    "content": "<p>After running the steps above to create a <code class=\"highlighter-rouge\">.snyk </code>policy file, you now need to create a <code class=\"highlighter-rouge\">bitbucket-pipelines.yml</code> file which will configure BitBucket Pipelines.</p>\n\n<p>On Bitbucket, add the Bitbucket Pipelines addon and enable it for the repository in question.</p>\n\n<p>Use the <code class=\"highlighter-rouge\">bitbucket-pipelines.yml</code> from <a href=\"https://bitbucket.org/johannakoll/snyk-pipelines\">the snyk-pipelines repository</a>.</p>\n\n<p>If you want to adapt an existing <code class=\"highlighter-rouge\">bitbucket-pipelines.yml</code> file, you should add the following line to <code class=\"highlighter-rouge\">pipelines -&gt; default -&gt; step -&gt; script</code>, just before the line <code class=\"highlighter-rouge\">- npm test</code>:</p>\n\n<p><code class=\"highlighter-rouge\">yaml\n- snyk protect\n</code></p>\n\n<p>This will ensure that any patches you chose during <code class=\"highlighter-rouge\">snyk wizard</code> are applied. The command <code class=\"highlighter-rouge\">snyk test</code> will automatically run as part of <code class=\"highlighter-rouge\">npm test</code> and will fail the pipeline if any known vulnerabilities are found in the dependencies.</p>\n"
+  },
+  
+  {
+    "title" : "Enable Pipelines",
+    "docs_bitbucket" : "true",
+    "url"     : "/docs/bitbucket/enable-pipelines",
+    "slug"     : "enable-pipelines",
+    "content": "<p>You should now enable Pipelines.</p>\n\n<p>Bitbucket Pipelines will apply any patches you specified when you ran <code class=\"highlighter-rouge\">snyk wizard</code>. It will pass if there are no known vulnerabilities in your dependencies, or fail if any are found.</p>\n"
   },
   
   {

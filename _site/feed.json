@@ -304,7 +304,7 @@
     "docs_bitbucket" : "true",
     "url"     : "/docs/bitbucket/enable-pipelines",
     "slug"     : "enable-pipelines",
-    "content": "<p>You should now enable Pipelines.</p>\n\n<p>Bitbucket Pipelines will apply any patches you specified when you ran <code class=\"highlighter-rouge\">snyk wizard</code>. It will pass if there are no known vulnerabilities in your dependencies, or fail if any are found.</p>\n"
+    "content": "<p>You should now enable Pipelines.</p>\n\n<p>Bitbucket Pipelines will apply any patches you specified when you ran <code class=\"highlighter-rouge\">snyk wizard</code>. It will pass if there are no known vulnerabilities in your dependencies, or fail if any are found.</p>\n\n<p><img src=\"http://res.cloudinary.com/snyk/image/upload/c_scale,w_2554/v1474020170/docs/bitbucket_pipelines.png\" alt=\"BitBucket Pipelines\" /></p>\n"
   },
   
   {

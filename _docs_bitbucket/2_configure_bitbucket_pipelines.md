@@ -8,7 +8,7 @@ On Bitbucket, add the Bitbucket Pipelines addon and enable it for the repository
 
 Use the `bitbucket-pipelines.yml` from [the snyk-pipelines repository](https://bitbucket.org/johannakoll/snyk-pipelines).
 
-If you want to adapt an existing `bitbucket-pipelines.yml` file, you should add the following line to `pipelines -> default -> step -> script`, just before the line `- npm test`:
+If you want to adapt an existing `bitbucket-pipelines.yml` file, you should add the following line just before the `npm test` step:
 
 ```yaml
 - snyk protect

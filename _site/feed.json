@@ -135,11 +135,11 @@
   },
   
   {
-    "title" : "How to integrate GitHub to test and monitor your repositories",
+    "title" : "How to integrate GitHub to test and watch your repositories",
     "docs_github" : "true",
-    "url"     : "/docs/github/how-to-integrate-github-to-test-and-monitor-your-repositories",
-    "slug"     : "how-to-integrate-github-to-test-and-monitor-your-repositories",
-    "content": "<p>You can add your GitHub repos and quickly test them, or decide which ones you’d like to continously monitor with Snyk.\n<img src=\"https://res.cloudinary.com/snyk/image/upload/f_auto,q_auto,c_scale,w_431/v1466629386/docs-find_scaled.jpg\" alt=\"Adding your GH repos\" /></p>\n\n<ol>\n  <li>Click the “Test my GitHub repositories button on the Homepage or Test page, or click “Monitor my GitHub repositories” on the Projects page. You can also add more repos from the Dashboard.</li>\n  <li>You need to grant Snyk additional GitHub permissions. If you haven’t granted permissions yet, you need to do so on GitHub.</li>\n  <li>Next, you’ll see a list of all GitHub repos across your GitHub organisations. Snyk automatically tests these repos, and you’ll see the test results, with the option to view a detailed test report. Clicking ‘Integrate’ will add this repo as a project to Snyk.</li>\n  <li>The integrated repos appear in your projects, and will continuously be monitored for vulnerabilities.</li>\n</ol>\n"
+    "url"     : "/docs/github/how-to-integrate-github-to-test-and-watch-your-repositories",
+    "slug"     : "how-to-integrate-github-to-test-and-watch-your-repositories",
+    "content": "<p>You can add your GitHub repos and quickly test them, or decide which ones you’d like to continously watch with Snyk.</p>\n\n<p><img src=\"http://res.cloudinary.com/snyk/image/upload/v1474293733/Your_GitHub_repositories.png\" alt=\"Adding your GH repos\" /></p>\n\n<ol>\n  <li>Click the “Test my GitHub repositories” button on your Dashboard, the Projects page or the Test page.</li>\n  <li>You need to grant Snyk additional GitHub permissions. If you haven’t granted permissions yet, you need to do so on GitHub.</li>\n  <li>Next, you’ll see a list of all GitHub repos across your GitHub organisations. Snyk automatically tests these repos, and you’ll see the test results, with the option to view a detailed test report.</li>\n  <li>Clicking ‘Watch’ will add this repo as a project to Snyk. The watched repos appear in your projects, and will be continuously checked for vulnerabilities.</li>\n  <li>“Open a fix PR” lets you fix vulnerabilities right away. You’ll be able to review the suggested remediations, and create a PR with the required upgrades or patches.</li>\n</ol>\n"
   },
   
   {

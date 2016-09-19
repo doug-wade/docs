@@ -75,6 +75,14 @@ layout:
     "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
     "content": {{ article.content | jsonify }}
   },
+  {% endfor %}{% assign slack-integration = site.docs_slack-integration | where: 'draft', 'false' %}{% for article in slack-integration %}
+  {
+    {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},
+    {% endif %}"docs_slack-integration" : "true",
+    "url"     : "/docs/slack-integration/{{ article.title | slugify }}",{% if article.title %}
+    "slug"     : {{ article.title | slugify | jsonify }},{% endif %}
+    "content": {{ article.content | jsonify }}
+  },
   {% endfor %}{% assign faqs = site.docs_faqs | where: 'draft', 'false' %}{% for article in faqs %}
   {
     {% if article.title == "" %}{% else %}"title" : {{ article.title | jsonify }},

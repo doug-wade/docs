@@ -8,12 +8,12 @@ You'll get two alerts in Slack:
 
 1: A newly disclosed vulnerability affects you
 
-![Slack Vulnerability Alert](http://res.cloudinary.com/snyk/image/upload/c_scale,w_486/v1474298426/Slack-Vulnerability-Alert.png)
+![Slack Vulnerability Alert](http://res.cloudinary.com/snyk/image/upload/q_auto,f_auto,w_auto/v1474298426/Slack-Vulnerability-Alert.png)
 
 2: A new upgrade or patch is available for a vulnerability that you previously ignored or patched
 
-![Slack Remediation Alert](http://res.cloudinary.com/snyk/image/upload/c_scale,w_513/v1474298547/Slack-Remediation-Alert.png)
+![Slack Remediation Alert](http://res.cloudinary.com/snyk/image/upload/q_auto,f_auto,w_auto/v1474298547/Slack-Remediation-Alert.png)
 
 To set it up, go to your 'Manage organisation' settings, and simply enter the Slack WebHook URL.
 
-![Slack Integration](http://res.cloudinary.com/snyk/image/upload/c_scale,w_570/v1474297920/Slack-Integration-Settings.png)
+![Slack Integration](http://res.cloudinary.com/snyk/image/upload/q_auto,f_auto,w_auto/v1474297920/Slack-Integration-Settings.png)

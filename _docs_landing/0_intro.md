@@ -31,7 +31,7 @@ policy ............. display the Snyk policy for a package.
 ```console
 --dev .............. include devDependencies (defaults to production only)
 --ignore-policy .... ignores and resets the state of your policy file
---trust-policies ... applies and uses ignore rules from your dependencies's Snyk policies, 
+--trust-policies ... applies and uses ignore rules from your dependencies's Snyk policies,
                      otherwise ignore policies are only shown as a suggestion.
 --dry-run .......... don't apply updates or patches during protect.
 -q, --quiet ........ silence all output.
@@ -46,6 +46,6 @@ snyk test
 snyk test ionic@1.6.5
 ```
 
-<div class="alert alert--inline">
-  <p>Use `snyk test` in your test scripts. If a vulnerability is found, the process will exit with a non-zero exit code.</p>
-</div>
+<p class="layout-aside backdrop-glowing u--push-bottom-l u--push-top-l">
+  Use <code>snyk test</code> in your test scripts. If a vulnerability is found, the process will exit with a non-zero exit code.
+</p>

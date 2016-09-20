@@ -312,7 +312,7 @@
     "docs_slack-integration" : "true",
     "url"     : "/docs/slack-integration/setup",
     "slug"     : "setup",
-    "content": "<p>Slack!</p>\n\n<p><img src=\"http://i.imgur.com/cu3kgCR.gif\" alt=\"\" /></p>\n"
+    "content": "<p>Don’t like email? You can set up Slack to receive Snyk’s alerts about new vulnerabilities that affect your projects, and about new upgrades or patches that have become available.</p>\n\n<p>You’ll get two alerts in Slack:</p>\n\n<p>1: A newly disclosed vulnerability affects you</p>\n\n<p><img src=\"http://res.cloudinary.com/snyk/image/upload/c_scale,w_486/v1474298426/Slack-Vulnerability-Alert.png\" alt=\"Slack Vulnerability Alert\" /></p>\n\n<p>2: A new upgrade or patch is available for a vulnerability that you previously ignored or patched</p>\n\n<p><img src=\"http://res.cloudinary.com/snyk/image/upload/c_scale,w_513/v1474298547/Slack-Remediation-Alert.png\" alt=\"Slack Remediation Alert\" /></p>\n\n<p>To set it up, go to your ‘Manage organisation’ settings, and simply enter the Slack WebHook URL.</p>\n\n<p><img src=\"http://res.cloudinary.com/snyk/image/upload/c_scale,w_570/v1474297920/Slack-Integration-Settings.png\" alt=\"Slack Integration\" /></p>\n"
   },
   
   {

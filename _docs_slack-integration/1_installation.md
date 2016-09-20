@@ -2,15 +2,15 @@
 title: Setup
 ---
 
-Don't like email? You can set up Slack to receive Snyk's alerts about new vulnerabilities that affect your projects, and about new upgrades or patches that have become available. 
+Don't like email? You can set up Slack to receive Snyk's alerts about new vulnerabilities that affect your projects, and about new upgrades or patches that have become available.
 
-You'll get two alerts in Slack: 
+You'll get two alerts in Slack:
 
-1. A newly disclosed vulnerability affects you
+1: A newly disclosed vulnerability affects you
 
 ![Slack Vulnerability Alert](http://res.cloudinary.com/snyk/image/upload/c_scale,w_486/v1474298426/Slack-Vulnerability-Alert.png)
 
-2. A new upgrade or patch is available for a vulnerability that you previously ignored or patched
+2: A new upgrade or patch is available for a vulnerability that you previously ignored or patched
 
 ![Slack Remediation Alert](http://res.cloudinary.com/snyk/image/upload/c_scale,w_513/v1474298547/Slack-Remediation-Alert.png)
 

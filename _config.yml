@@ -22,6 +22,8 @@ keep_files:  ['.git']
 
 markdown:    kramdown
 
+highlighter: rouge
+
 permalink:   :title/
 
 collections:

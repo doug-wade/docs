@@ -9,7 +9,8 @@ To continuously avoid known vulnerabilities in your dependencies, integrate Snyk
 3. Ensure the `.snyk` file you generated was added to your source control (`git add .snyk`).
 4. If you selected to, Snyk will include `snyk test` as part of your `npm test` command, so if there are new vulnerabilities in the future, your CI will fail, protecting you from introducing vulnerabilities to production. Alternatively, you can add `snyk test` to any other CI test platform you use.
 
-If you monitor a project with Snyk, you'll get notified if your project's dependencies are affected by newly disclosed vulnerabilities. To make sure this list of dependencies is up to date, refresh it continuously by running `snyk monitor` in your deployment process. You'll also need to authenticate to Snyk, so we can know where to update the dependencies.
+To stay secure over time, Snyk alerts you about newly disclosed vulnerabilities that affect your project's dependencies. 
+To make sure the list of dependencies we have for your project is up to date, refresh it continuously by running `snyk monitor` in your deployment process. You'll also need to authenticate to Snyk, so we know where to update the dependencies.
 
 To do both, add the following to your deployment scripts:
 
@@ -18,7 +19,7 @@ snyk auth $SNYK_TOKEN
 snyk monitor
 ```
 
-Configure your environment to include the `SNYK_TOKEN` environment variable. You can find your API token on the dashboard after logging in.
+Configure your environment to include the `SNYK_TOKEN` environment variable. You can find your API token in your [account settings on snyk.io](https://snyk.io/account/). 
 
 #### Important note:
 

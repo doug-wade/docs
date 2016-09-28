@@ -6,7 +6,8 @@ After running the steps above to create a `.snyk `policy file, you now need to c
 
 If you aren't using Pipelines yet, go to Bitbucket, add the Bitbucket Pipelines add-on, and enable it for the repository in question. 
 
-### Creating a new `bitbucket-pipelines.yml` file
+### Creating a new bitbucket-pipelines.yml file
+
 
 Use the `bitbucket-pipelines.yml` from [the snyk-pipelines repository](https://bitbucket.org/johannakoll/snyk-pipelines/src).
 
@@ -20,7 +21,8 @@ As part of setup, you need to configure your environment to include the `SNYK_TO
 ![Configuring the environment variable](http://res.cloudinary.com/snyk/image/upload/c_scale,w_500/v1475078005/Configure_env_var_on_BB.png)
 *Configuring the environment variable*
 
-### Adapting an existing `bitbucket-pipelines.yml` file
+### Adapting an existing bitbucket-pipelines.yml file
+
 
 If you want to adapt an existing `bitbucket-pipelines.yml` file, we recommend to add Snyk like this:
 

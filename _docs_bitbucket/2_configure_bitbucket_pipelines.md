@@ -8,10 +8,10 @@ If you aren't using Pipelines yet, go to Bitbucket, add the Bitbucket Pipelines 
 
 ### Creating a new bitbucket-pipelines.yml file
 
-
 Use the `bitbucket-pipelines.yml` from [the snyk-pipelines repository](https://bitbucket.org/johannakoll/snyk-pipelines/src).
 
 This file has the configuration we recommend to stay secure:
+
 * `snyk protect` applies any patches you chose during `snyk wizard`. 
 * `snyk test` will automatically run as part of `npm test` and will fail the pipeline if any known vulnerabilities are found in the dependencies.
 * Snyk alerts you when newly disclosed vulnerabilities affect your project's dependencies. `snyk monitor` makes sure we have an up-to-date list of your dependencies to do so accurately. You'll also need to authenticate to Snyk, so we know where to update the dependencies.
@@ -19,10 +19,9 @@ This file has the configuration we recommend to stay secure:
 As part of setup, you need to configure your environment to include the `SNYK_TOKEN` environment variable in the Bitbucket settings. You can find your API token in your [account settings on snyk.io](https://snyk.io/account/). 
 
 ![Configuring the environment variable](http://res.cloudinary.com/snyk/image/upload/c_scale,w_500/v1475078005/Configure_env_var_on_BB.png)
-*Configuring the environment variable*
+_Configuring the environment variable_
 
 ### Adapting an existing bitbucket-pipelines.yml file
-
 
 If you want to adapt an existing `bitbucket-pipelines.yml` file, we recommend to add Snyk like this:
 

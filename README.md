@@ -9,6 +9,8 @@ Preview url: https://snyk.github.io/docs/
 3. If there are no errors, run `jekyll serve`
 4. Go to **http://localhost:4000/docs/** in your browser
 
+Check out the [Markdown-cheatsheet](https://github.com/Snyk/general/wiki/Markdown-cheatsheet) for how to write content.
+
 ### Saving drafts
 
 If you want to preview a file but not let the changes show on production, add this line to the YAML front-matter:

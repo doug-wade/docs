@@ -19,7 +19,7 @@ This file has the configuration we recommend to stay secure:
 As part of setup, you need to configure your environment to include the `SNYK_TOKEN` environment variable in the Bitbucket settings. You can find your API token in your [account settings on snyk.io](https://snyk.io/account/). 
 
 ![Configuring the environment variable](http://res.cloudinary.com/snyk/image/upload/c_scale,w_500/v1475078005/Configure_env_var_on_BB.png)
-_Configuring the environment variable_
+*Configuring the environment variable*
 
 ### Adapting an existing bitbucket-pipelines.yml file
 

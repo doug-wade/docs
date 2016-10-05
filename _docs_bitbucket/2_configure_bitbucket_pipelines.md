@@ -8,7 +8,7 @@ If you aren't using Pipelines yet, go to Bitbucket, add the Bitbucket Pipelines 
 
 ### Creating a new bitbucket-pipelines.yml file
 
-Use the `bitbucket-pipelines.yml` from [the snyk-pipelines repository](https://bitbucket.org/johannakoll/snyk-pipelines/src).
+Use the `bitbucket-pipelines.yml` from [the snyk-pipelines repository](https://bitbucket.org/snyk/snyk-pipelines/src/).
 
 This file has the configuration we recommend to stay secure:
 

@@ -39,3 +39,4 @@ collections:
   - docs_landing
   - docs_bitbucket
   - docs_slack-integration
+  - docs_broker

@@ -60,6 +60,16 @@
           </ul>
           {% endif %}
         </li>
+        <li class="nav-tree__item nav--docs__item nav--docs__broker">
+          <a href="/docs/broker/" class="nav-tree__item__link">Snyk Broker</a>
+          {% if page.section == "broker" %}
+          <ul class="nav-tree__branch">{% for article in site.docs_broker %}{% if article.title == "" %}{% else %}
+            <li class="nav-tree__item {% if article.draft %}status--draft{% endif %}">
+              <a href="/docs/broker/#{{article.title | slugify}}" class="nav-tree__item__link">{{article.title}}</a>
+            </li>{% endif %}{% endfor %}
+          </ul>
+          {% endif %}
+        </li>
         <li class="nav-tree__item nav--docs__item nav--docs__ci">
           <a href="/docs/ci/" class="nav-tree__item__link">CI integration</a>
           {% if page.section == "ci" %}
@@ -216,6 +226,15 @@
 
       {% if page.section == "slack-integration" %}
       {% for article in site.docs_slack-integration %}
+      {% if article.draft %}<div class="status--draft">{% endif %}
+        {% if article.title == "" %}{% else %}<h2 id="{{article.title | slugify}}">{{ article.title }}</h2>{% endif %}
+        {{ article.content | markdownify }}
+      {% if article.draft %}</div><!-- .status--draft -->{% endif %}
+      {% endfor %}
+      {% endif %}
+
+      {% if page.section == "broker" %}
+      {% for article in site.docs_broker %}
       {% if article.draft %}<div class="status--draft">{% endif %}
         {% if article.title == "" %}{% else %}<h2 id="{{article.title | slugify}}">{{ article.title }}</h2>{% endif %}
         {{ article.content | markdownify }}

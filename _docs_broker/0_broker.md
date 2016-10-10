@@ -1,14 +1,14 @@
 ---
-
+title: ""
 ---
 
-<div class="alert alert--inline alert--notice">
+<div class="alert alert--inline alert--notice u--push-bottom-l">
   <p class="alert__text">
     [Insert some text about Snyk Broker]
   </p>
 </div>
 
-These instructions will get you up and running with a Snyk broker, allowing your private GitHub Enterprise to connect to Snyk.io. A Snyk broker can also be used between Snyk and github.com itself.
+<p>These instructions will get you up and running with a Snyk broker, allowing your private GitHub Enterprise to connect to Snyk.io. A Snyk broker can also be used between Snyk and github.com itself.</p>
 
 ## GitHub / GitHub Enterprise setup
 

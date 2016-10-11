@@ -20,14 +20,15 @@ To set up and run a Snyk broker client:
 
 3. Edit the ".env" file, providing the following details:
 
-    | Variable name     | Description                                                                                                                                          |
-    |-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | BROKER_TOKEN      | Your unique broker token. This is displayed on the organisation settings page on [snyk.io](https://snyk.io). **This is a private token and must not be shared.**      |
-    | GITHUB_TOKEN      | A GitHub Enterprise (of GitHub) personal access token for the user that Snyk will use to access your repositories.                                   |
-    | GITHUB            | The host (and port if necessary) of your private GitHub server.                                                                                      |
-    | GITHUB_API        | The url to the api of your private GitHub server.                                                                                                    |
-    | GITHUB_RAW        | The url to access raw contents of files in git repos on your private GitHub server                                                                   |
-    | BROKER_CLIENT_URL | The url that your broker *client* is accessible at, which will be used for GitHub webhooks that notify Snyk of relevant changes to your repositories |
+    | Variable name     | Description                                                                                                                                                      |
+    |-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | BROKER_TOKEN      | Your unique broker token. This is displayed on the organisation settings page on [snyk.io](https://snyk.io). **This is a private token and must not be shared.** |
+    | GITHUB_TOKEN      | A GitHub Enterprise (or GitHub) personal access token for the user that Snyk will use to access your repositories.                                               |
+    | GITHUB            | The host (and port if necessary) of your private GitHub server.                                                                                                  |
+    | GITHUB_API        | The url to the api of your private GitHub server.                                                                                                                |
+    | GITHUB_RAW        | The url to access raw contents of files in git repos on your private GitHub server                                                                               |
+    | BROKER_CLIENT_URL | The url that your broker *client* is accessible at, which will be used for GitHub webhooks that notify Snyk of relevant changes to your repositories             |
+
 
    The .env file itself is optional, all of these details may be provided to the broker as environment variables.
 
@@ -41,6 +42,6 @@ To set up and run a Snyk broker client:
 
     `$ broker client --verbose`
 
-   Note: your BROKER_TOKEN will be outputted on stdout when the broker is started with `--verbose`.
+   Note: your BROKER_TOKEN will be output on stdout when the broker is started with `--verbose`.
 
 Alternatively, the broker can also be installed as part of a private npm package. See [https://github.com/Snyk/broker-snyk-client-example](https://github.com/Snyk/broker-snyk-client-example) for an example of this.

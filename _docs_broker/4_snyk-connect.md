@@ -5,12 +5,14 @@ title: "Connect Snyk to your brokered GitHub Enterprise / GitHub"
 Once your broker client is up and running, you can connect you Snyk account to your GitHub Enterprise.
 
  1. **Important:** log out of [https://snyk.io](https://snyk.io)
- 2. log in to [https://snyk.io](https://snyk.io)
+ 2. log back in to [https://snyk.io](https://snyk.io)
  3. select the organisation that you're using with your broker
  4. navigate to the "Projects" page
  5. click on "Test my GitHub repositories"
  6. you will be prompted for GitHub permissions, which must be provided. This is required while the broker is in early-access, but this access *is not used*
  7. you should see repositories from your brokered GitHub Enterprise / GitHub
+
+### Troubleshooting
 
 If you do not see any repositories, you may need to click the "Re-sync" button.
 

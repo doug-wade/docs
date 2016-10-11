@@ -6,6 +6,24 @@ title: Using Snyk
 
 Integrating Snyk will prevent code changes from introducing new vulnerable packages. [Find out how to integrate Snyk into your workflow](https://snyk.io/docs/using-snyk/#integrating-snyk-into-your-dev-workflow).
 
+### How can I use Snyk behind a proxy?
+
+To run Snyk from behind a proxy you will need to use an enviroment value to point to your proxy. The following environment variables are respected by Snyk:
+
+- `HTTP_PROXY` / `http_proxy`
+- `HTTPS_PROXY` / `https_proxy`
+- `NO_PROXY` / `no_proxy`
+
+For example, to configure this as a one time value, you can run:
+
+`$ https_proxy=https://my.corporate.proxy:8080/ snyk test`
+
+### Why does Snyk install itself into my production dependencies?
+
+After running `snyk wizard`, if you choose to protect upon installation of your package, Snyk will need to be bundled as a production dependency.
+
+However, if you select to *only* test your page (and not protect), Snyk will install itself as a development dependency.
+
 <h3 class="h4">How can I test a Github repository from the command-line interface tool (CLI)?</h3>
 
 Currently, we support testing public Github repositories only.

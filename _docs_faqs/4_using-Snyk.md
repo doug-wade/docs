@@ -24,7 +24,7 @@ After running `snyk wizard`, if you choose to protect upon installation of your 
 
 However, if you select to *only* test your page (and not protect), Snyk will install itself as a development dependency.
 
-<h3 class="h4">How can I test a Github repository from the command-line interface tool (CLI)?</h3>
+### How can I test a Github repository from the command-line interface tool (CLI)?
 
 Currently, we support testing public Github repositories only.
 To test a public Github repository, run snyk test and include the Github URL to the repo.

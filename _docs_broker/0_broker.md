@@ -1,5 +1,5 @@
 ---
-title: "Using Snyk with GitHub Enterprise"
+title: ""
 ---
 
 Snyk can be used with private GitHub Enterprise installations via a [custom proxy], referred to as the Snyk "broker". A Snyk broker can also be used between Snyk and github.com itself, to reduce Snyk's access to your GitHub repositories.

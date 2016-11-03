@@ -4,10 +4,10 @@ title: Fix vulnerabilities with Snyk pull requests
 
 When viewing a Snyk test report for a repo that you own, or when looking at a project that you are watching with Snyk, you’ll see two options for fixing a vulnerability: 
 
-1) ‘Open a fix PR’ link:
+1) **‘Open a fix PR’ link:**
 Generate a Snyk pull request with the minimal changes needed to fix the vulnerabilities affecting the repo.
 
-2) 'Fix this vulnerability' link:
+2) **'Fix this vulnerability' link:**
 Generate a Snyk pull request that fixes only this vulnerability.
 
 ![Fix button](http://res.cloudinary.com/snyk/image/upload/c_scale,w_774/v1478172579/docs/Fix_vulnerabilities_with_a_pull_request.png)

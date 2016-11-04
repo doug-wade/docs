@@ -26,6 +26,32 @@ If you’re unsure and would like to assess the impact before applying a fix, yo
 
 ### What if there is no upgrade or patch available?
 
-Assess the issue, and weigh up risk against effort. If the risk is high, you could remove the dependency. Using `snyk wizard`, you can ignore the vulnerability for 30 days, adding a reason why. Snyk will ask you again what to do in 30 days time; and if you monitor the project, we will notify you if any upgrades or patches become available.
+Assess the issue, and weigh up risk against effort. If the risk is high, you could remove the dependency. Both [Snyk CLI](/docs/using-snyk/) and the [GitHub integration](/docs/github/) allow you to ignore the vulnerability for 30 days.
 
-If you decide that the vulnerability is not an issue (for instance, because a component is not really deployed to production), you can manually edit the Snyk policy (.snyk) file to use a far-future expiry date for this instance. Note that Snyk does not test devDependencies by default, avoiding most such red herrings.
+### How can I ignore a vulnerability?
+
+We normally recommend that you don't ignore vulnerabilities unless there are no fixes available. However if you don't want to fix a vulnerability, and would like to ignore it, there are a few ways you can do this.
+
+For npm projects you can use `snyk wizard` to ignore the vulnerability for 30 days, adding a reason why. Note that for npm projects, Snyk does not test `devDependencies` by default.
+
+For all projects (including Ruby projects), you can ignore the vulnerability by creating a `.snyk` YAML file in the root of your project with the following format:
+
+```
+version: v1.5.0
+ignore:
+  '{SNYK ID}':
+    - '* > {AFFECTED MODULE}':
+        reason: '{Optional, the reason why you are ignoring the vulnerability}'
+        expires: '{valid ISO 8601 date}'
+```
+
+For example, if you wanted to ignore the vulnerability with SNYK ID [SNYK-RUBY-FASTREADER-20085](https://snyk.io/vuln/SNYK-RUBY-FASTREADER-20085) in `fastreader`, with the reason "No remediation available" until 01 Jan 2017, you would write:
+
+```
+version: v1.5.0
+ignore:
+  'SNYK-RUBY-FASTREADER-20085':
+    - '* > fastreader':
+        reason: 'No remediation available'
+        expires: '2017-01-01T00:00:00.000Z'
+```
